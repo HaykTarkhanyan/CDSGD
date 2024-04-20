@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cdsgd
+Version: 0.1
+Summary: Tabular interpretable clustering based on Dempster-Shafer                 Theory and Gradient Descent
+Home-page: https://github.com/ricardo-valdivia/CDSGD
+Author: Ricardo Valdivia
+Description-Content-Type: text/markdown
+
+# DSClustering
+
+Tabular interpretable clustering based on Dempster-Shafer Theory andÂ 
+Gradient Descent
+
+
+## Description
+
+This repository contains 1 implementation of the clustering:
+
+- `DSClustering`

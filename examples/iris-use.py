@@ -2,7 +2,7 @@
 import pandas as pd
 from cdsgd import DSClustering
 # Read the CSV
-data_path = "./data/iris.csv"
+data_path = "../data/iris.csv"
 data = pd.read_csv(data_path)
 
 # Extract the feature matrix and the target variable

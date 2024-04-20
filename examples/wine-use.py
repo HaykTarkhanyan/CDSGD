@@ -1,10 +1,12 @@
 # Imports
+import os
 import pandas as pd
 from cdsgd import DSClustering
 
 # Read the CSV
 data_path = "./data/wine.csv"
-data = pd.read_csv(data_path)
+data_path = os.path.join("..", "data", "wine.csv")
+data = pd.read_csv(data_path).head(10)
 
 # The dataset includes features related to wine properties and a target
 # 'quality' for each sample

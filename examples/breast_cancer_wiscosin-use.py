@@ -1,10 +1,12 @@
 # Imports
+import os
 import numpy as np
 import pandas as pd
 from cdsgd import DSClustering
 
 # Read the CSV
 data_path = "./data/breast-cancer-wisconsin.csv"
+data_path = os.path.join("..", "data", "breast-cancer-wisconsin.csv")
 data = pd.read_csv(data_path)
 
 # Replace '?' with NaN and then convert the entire DataFrame to numeric,

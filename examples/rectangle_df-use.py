@@ -1,9 +1,12 @@
 # Imports
+import os
 import pandas as pd
 from cdsgd import DSClustering
 
 # Read the CSV
-data_path = "./data/rectangle_df.csv"
+data_path = os.path.join("data", "rectangle_df.csv")
+if not os.path.exists(data_path):
+    data_path = os.path.join("..", data_path)
 data = pd.read_csv(data_path)
 
 # Since the data is already in a suitable format, we can directly use it.
