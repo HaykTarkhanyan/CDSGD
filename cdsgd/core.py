@@ -108,10 +108,8 @@ def create_full_uncertainty():
 def create_uncertainty_kmeans(data, pred):
     assert "labels_kmeans" in data.columns, "No kmeans labels in data"
     
-    confidence = filter_by_rule(data, pred)
-    print(confidence)
-    return confidence
-    # raise NotImplementedError
+    masses = filter_by_rule(data, pred)
+    return masses
     
     
 

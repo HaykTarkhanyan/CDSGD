@@ -46,18 +46,15 @@ class DSModelMultiQ(nn.Module):
         :return:
         """
         self.preds.append(pred)
-        print(pred, "pred")
         self.n += 1
         if method == "random":
             if m_sing is None or m_uncert is None or len(m_sing) != self.k:
                 masses = create_random_maf_k(self.k, 0.8)
-                print(masses)
             else:
                 masses = m_sing + [m_uncert]
         elif method == "kmeans":
             assert self.data is not None, "Data must be provided for kmeans method"
             masses = create_uncertainty_kmeans(self.data, pred)
-            # print("done")
         else:
             raise ValueError(f"Method {method} not available, select one from [random, kmeans]")
         m = torch.tensor(masses, requires_grad=True, dtype=torch.float)

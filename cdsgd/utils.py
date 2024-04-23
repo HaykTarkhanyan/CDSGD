@@ -2,10 +2,21 @@ import numpy as np
 from sklearn.cluster import KMeans
 import logging 
 
-from config import LOWER_CONFIDENCE_BY_PROPORTION
+from config import LOWER_CONFIDENCE_BY_PROPORTION, OUTLIER_THRESHOLD_NUM_STD
 
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(message)s", 
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
                     datefmt="%d-%b-%y %H:%M:%S")
+
+def detect_outliers_z_score(data, threshold=OUTLIER_THRESHOLD_NUM_STD):
+    outliers = []
+    mean = np.mean(data)
+    std_dev = np.std(data)
+    
+    for i in data:
+        z_score = (i - mean) / std_dev 
+        if np.abs(z_score) > threshold:
+            outliers.append(i)
+    return outliers
 
 def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
                    only_plot=False):
@@ -34,6 +45,9 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         
 
     """
+    required_columns = ["labels_kmeans", "distance_to_centroid_norm"]
+    for column in required_columns:
+        assert column in df.columns, f"{column} column not found in DataFrame"
     
     # example is lambda row: row["x"]>0.5 and row["y"]>0.5
     df["rule_applies"] = df.apply(rule_lambda, axis=1)
@@ -42,7 +56,7 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
     
     if df_rule.empty:
         logging.info("No data points left after filtering")
-        return df
+        return 0, 0, 1 # full uncertainty
     
     if only_plot:
         fig = px.scatter(df, x="x", y="y", color="rule_applies")
