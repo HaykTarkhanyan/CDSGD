@@ -30,19 +30,25 @@ class DSModel(nn.Module):
         if use_softmax:
             self.sm = Softmax(dim=0)
 
-    def add_rule(self, pred, ma=None, mb=None, mab=None):
+    def add_rule(self, pred, ma=None, mb=None, mab=None, method="random"):
         """
         Adds a rule to the model. If no masses are provided, random masses will be used.
         :param pred: DSRule or lambda or callable, used as the predicate of the rule
         :param ma: [optional] mass for first element
         :param mb: [optional] mass for second element
         :param mab: [optional] mass for uncertainty
+        :param method: [optional] method to generate masses (can be KMeans), by default random
         :return:
         """
         self.preds.append(pred)
         self.n += 1
-        if ma is None or mb is None or mab is None:
-            _, ma, mb, mab = create_random_maf()
+        if method == "random":
+            if ma is None or mb is None or mab is None:
+                _, ma, mb, mab = create_random_maf()
+        # elif method == "KMeans":
+        #     pass
+        # else:
+        #     raise ValueError(f"Method {method} not implemented")
         self.masses.append(Variable(torch.Tensor([[ma], [mb], [mab]]), requires_grad=True))
 
     def forward(self, X):

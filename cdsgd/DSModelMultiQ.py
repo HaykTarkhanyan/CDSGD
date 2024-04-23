@@ -7,9 +7,9 @@ import numpy as np
 from scipy.stats import norm
 from itertools import count
 
-from DSRule import DSRule
-from core import create_random_maf_k
-from utils import is_categorical
+from .DSRule import DSRule
+from .core import create_random_maf_k, create_full_uncertainty
+from .utils import is_categorical
 
 
 class DSModelMultiQ(nn.Module):
@@ -17,7 +17,8 @@ class DSModelMultiQ(nn.Module):
     Torch module implementation of DS General Classification
     """
 
-    def __init__(self, k, precompute_rules=False, device="cpu", force_precompute=False):
+    def __init__(self, k, precompute_rules=False, device="cpu", force_precompute=False,
+                 maf_method="random"):
         """
         Creates an empty DS Model
         """
@@ -32,21 +33,28 @@ class DSModelMultiQ(nn.Module):
         self.rmap = {}
         self.active_rules = []
         self._all_rules = None
+        self.maf_method = maf_method
 
-    def add_rule(self, pred, m_sing=None, m_uncert=None):
+    def add_rule(self, pred, m_sing=None, m_uncert=None, method="random"):
         """
         Adds a rule to the model. If no masses are provided, random masses will be used.
         :param pred: DSRule or lambda or callable, used as the predicate of the rule
         :param m_sing: [optional] masses for singletons
         :param m_uncert: [optional] mass for uncertainty
+        :param method: [optional] method to generate masses (can be kmeans), default is random
         :return:
         """
         self.preds.append(pred)
         self.n += 1
-        if m_sing is None or m_uncert is None or len(m_sing) != self.k:
-            masses = create_random_maf_k(self.k, 0.8)
+        if method == "random":
+            if m_sing is None or m_uncert is None or len(m_sing) != self.k:
+                masses = create_random_maf_k(self.k, 0.8)
+            else:
+                masses = m_sing + [m_uncert]
+        elif method == "full":
+            masses = create_full_uncertainty()
         else:
-            masses = m_sing + [m_uncert]
+            raise ValueError(f"Method {method} not recognized")
         m = torch.tensor(masses, requires_grad=True, dtype=torch.float)
         self._params.append(m)
         # self.masses = torch.cat((self.masses, m.view(1, self.k + 1)))
@@ -259,19 +267,23 @@ class DSModelMultiQ(nn.Module):
             if is_categorical(X[:, i]):
                 categories = np.unique(X[:, i][~np.isnan(X[:, i])])
                 for cat in categories:
-                    self.add_rule(DSRule(lambda x, i=i, k=cat: x[i] == k, "%s = %s" % (column_names[i], str(cat))))
+                    rule = DSRule(lambda x, i=i, k=cat: x[i] == k, f"{column_names[i]} = {cat}")
+                    self.add_rule(rule, method=self.maf_method)
             else:
                 # First rule
                 v = mean[i] + std[i] * brks[0]
-                self.add_rule(DSRule(lambda x, i=i, v=v: x[i] <= v, "%s < %.3f" % (column_names[i], v)))
+                rule = DSRule(lambda x, i=i, v=v: x[i] <= v, f"{column_names[i]} < {v:.3f}")
+                self.add_rule(rule, method=self.maf_method)
                 # Mid rules
                 for j in range(1, len(brks)):
                     vl = v
                     v = mean[i] + std[i] * brks[j]
-                    self.add_rule(DSRule(lambda x, i=i, vl=vl, v=v: vl <=
-                                  x[i] < v, "%.3f < %s < %.3f" % (vl, column_names[i], v)))
+                    rule = DSRule(lambda x, i=i, vl=vl, v=v: vl <=
+                                  x[i] < v, f"{vl:.3f} < {column_names[i]} < {v:.3f}")
+                    self.add_rule(rule, method=self.maf_method)
                 # Last rule
-                self.add_rule(DSRule(lambda x, i=i, v=v: x[i] > v, "%s > %.3f" % (column_names[i], v)))
+                rule = DSRule(lambda x, i=i, v=v: x[i] > v, f"{column_names[i]} > {v:.3f}")
+                self.add_rule(rule, method=self.maf_method)
 
     def generate_categorical_rules(self, X, column_names=None, exclude=None):
         """

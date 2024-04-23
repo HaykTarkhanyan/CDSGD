@@ -7,17 +7,19 @@ from sklearn.base import ClassifierMixin
 from torch.autograd import Variable
 from torch.utils.data.sampler import WeightedRandomSampler
 
-from DSModelMultiQ import DSModelMultiQ
+from .DSModelMultiQ import DSModelMultiQ
 
+print("HI")
 
 class DSClassifierMultiQ(ClassifierMixin):
     """
     Implementation of Classifier based on DSModel
     """
-
+    print("Hi")
     def __init__(self, num_classes, lr=0.005, max_iter=200, min_iter=2, min_dloss=0.0001, optim="adam", lossfn="MSE",
                  debug_mode=False, step_debug_mode=False, batch_size=4000, num_workers=1,
-                 precompute_rules=False, device="cpu", force_precompute=False):
+                 precompute_rules=False, device="cpu", force_precompute=False, 
+                 maf_method="random"):
         """
         Creates the classifier and the DSModel (accesible in attribute model)
         :param lr: Learning rate
@@ -28,8 +30,10 @@ class DSClassifierMultiQ(ClassifierMixin):
         :param debug_mode: Enables debug in training (prtinting and output metrics)
         :param device: [ cpu | cuda | mps ] Device to use by pytorch
         :param force_precompute: Forces precomputation of rules, could use too much RAM
+        :param maf_method: Method to generate random mass assignment functions (random | kmeans), default random
         """
-        self.k = num_classes
+        print("PLEASE")
+        self.k = num_classe
         self.lr = lr
         self.optim = optim
         self.lossfn = lossfn
@@ -48,8 +52,10 @@ class DSClassifierMultiQ(ClassifierMixin):
         self.balance_class_data = False
         self.debug_mode = debug_mode
         self.step_debug_mode = step_debug_mode
+        self.maf_method = maf_method
         self.model = DSModelMultiQ(num_classes, precompute_rules=precompute_rules,
-                                    device=self.device, force_precompute=force_precompute).to(self.device)
+                                    device=self.device, force_precompute=force_precompute, 
+                                    maf_method=self.maf_method).to(self.device)
         self.classes_ = [k for k in range(self.k)]
 
     def fit(self, X, y, add_single_rules=False, single_rules_breaks=2, add_mult_rules=False, column_names=None, **kwargs):
@@ -138,7 +144,7 @@ class DSClassifierMultiQ(ClassifierMixin):
                         print_partial_time=False, print_every_epochs=None, print_least_loss=True, return_partial_dt=False,
                         disable_all_print=False, print_epoch_progress=False):
         losses = []
-        print("Optimization started")
+        print("Optimization started, hello")
 
         if disable_all_print:
             print_every_epochs = None
