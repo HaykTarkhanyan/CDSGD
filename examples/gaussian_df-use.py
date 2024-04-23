@@ -1,9 +1,16 @@
 # Imports
 import pandas as pd
+
+import sys
+# caution: path[0] is reserved for script path (or '' in REPL)
+sys.path.insert(1, r'C:\Users\hayk_\OneDrive\Desktop\Thesis\CDSGD')
+# sys.path.insert(2, r'C:\Users\hayk_\OneDrive\Desktop\Thesis\CASED')
+
+
 from cdsgd import DSClustering
 
 # Read the CSV
-data_path = "./data/gaussian_df.csv"
+data_path = "../data/gaussian_df.csv"
 data = pd.read_csv(data_path)
 
 # Since the data is already in a suitable format, we can directly use it.

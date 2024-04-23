@@ -1,6 +1,6 @@
 from typing import Union
 import pandas as pd
-from dsgd.DSClassifierMultiQ import DSClassifierMultiQ
+from .DSClassifierMultiQ import DSClassifierMultiQ
 from sklearn.model_selection import train_test_split
 from .ClusteringSelector import ClusteringSelector
 from sklearn.metrics import accuracy_score, f1_score, silhouette_score

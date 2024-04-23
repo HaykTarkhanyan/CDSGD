@@ -22,6 +22,9 @@ torchaudio==0.12.0+cu113
 torchvision==0.13.0+cu113
 typing_extensions==4.3.0
 urllib3==1.26.11
+ipykernel
+orange3
+plotly
 # dsgd @ git+https://github.com/Sergio-P/DSGD.git
 
 # package location
