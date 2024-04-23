@@ -1,0 +1,5 @@
+LOWER_CONFIDENCE_BY_PROPORTION = True
+OUTLIER_THRESHOLD_NUM_STD = 2
+
+# DSClassifierMultiQ
+max_iter = 500

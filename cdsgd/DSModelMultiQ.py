@@ -7,9 +7,9 @@ import numpy as np
 from scipy.stats import norm
 from itertools import count
 
-from .DSRule import DSRule
-from .core import create_random_maf_k, create_full_uncertainty
-from .utils import is_categorical
+from DSRule import DSRule
+from core import create_random_maf_k, create_uncertainty_kmeans
+from utils import is_categorical
 
 
 class DSModelMultiQ(nn.Module):
@@ -18,7 +18,7 @@ class DSModelMultiQ(nn.Module):
     """
 
     def __init__(self, k, precompute_rules=False, device="cpu", force_precompute=False,
-                 maf_method="random"):
+                 maf_method="random", data=None):
         """
         Creates an empty DS Model
         """
@@ -34,6 +34,7 @@ class DSModelMultiQ(nn.Module):
         self.active_rules = []
         self._all_rules = None
         self.maf_method = maf_method
+        self.data = data # needed for kmeans method
 
     def add_rule(self, pred, m_sing=None, m_uncert=None, method="random"):
         """
@@ -45,16 +46,20 @@ class DSModelMultiQ(nn.Module):
         :return:
         """
         self.preds.append(pred)
+        print(pred, "pred")
         self.n += 1
         if method == "random":
             if m_sing is None or m_uncert is None or len(m_sing) != self.k:
                 masses = create_random_maf_k(self.k, 0.8)
+                print(masses)
             else:
                 masses = m_sing + [m_uncert]
-        elif method == "full":
-            masses = create_full_uncertainty()
+        elif method == "kmeans":
+            assert self.data is not None, "Data must be provided for kmeans method"
+            masses = create_uncertainty_kmeans(self.data, pred)
+            # print("done")
         else:
-            raise ValueError(f"Method {method} not recognized")
+            raise ValueError(f"Method {method} not available, select one from [random, kmeans]")
         m = torch.tensor(masses, requires_grad=True, dtype=torch.float)
         self._params.append(m)
         # self.masses = torch.cat((self.masses, m.view(1, self.k + 1)))

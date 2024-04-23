@@ -1,5 +1,91 @@
 import numpy as np
 from sklearn.cluster import KMeans
+import logging 
+
+from config import LOWER_CONFIDENCE_BY_PROPORTION
+
+logging.basicConfig(level=logging.DEBUG, format="%(asctime)s [%(levelname)s] %(message)s", 
+                    datefmt="%d-%b-%y %H:%M:%S")
+
+def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
+                   only_plot=False):
+    """
+    Filters a DataFrame based on a given rule lambda function and calculates the confidence score.
+
+    Note:
+        The confidence score is calculated as the average distance to the centroid of the most common cluster.
+        If the data points belong to the same cluster, the confidence score is the average distance to the centroid.
+        If the data points belong to different clusters, the confidence score is the average distance to the centroid of the most common cluster.
+        If the confidence score is lowered by proportion, the confidence score is multiplied by the proportion of data points in the most common cluster.
+
+        Since the closer the data points are to the centroid, the better, the confidence score is calculated as 1 - ... 
+    Args:
+        df (pd.DataFrame): The input DataFrame to filter.
+        rule_lambda (function): A lambda function that defines the filtering rule.
+        lower_confidence_by_proportion (bool, optional): Whether to lower the confidence score by proportion. 
+            Defaults to True.
+        only_plot (bool, optional): Whether to to only plot the data. Defaults to False.
+        
+    Returns:
+        tuple: A tuple containing the filtered DataFrame and the confidence score.
+
+    Example:
+        filter_by_rule(df, lambda row: row["x"]>0.5 and row["y"]>0.5)
+        
+
+    """
+    
+    # example is lambda row: row["x"]>0.5 and row["y"]>0.5
+    df["rule_applies"] = df.apply(rule_lambda, axis=1)
+    
+    df_rule = df[df["rule_applies"]]
+    
+    if df_rule.empty:
+        logging.info("No data points left after filtering")
+        return df
+    
+    if only_plot:
+        fig = px.scatter(df, x="x", y="y", color="rule_applies")
+        fig = add_centroids(fig, kmeans)
+        fig.show()
+        return fig 
+    
+    num_labels = df_rule["labels_kmeans"].nunique()
+    
+    logging.debug(f"Number of data points left after filtering: {len(df_rule)}")
+    logging.debug(f"Number of clusters left after filtering: {num_labels}")  
+    
+    most_common_cluster = df_rule["labels_kmeans"].mode().values[0]
+    logging.debug(f"Most common cluster: {most_common_cluster}")
+
+    
+    if df_rule["labels_kmeans"].nunique() == 1:
+        
+        logging.debug("All data points belong to the same cluster")
+        confidence = df_rule["distance_to_centroid_norm"].mean()
+        
+        logging.debug(f"Confidence: {1 - confidence}")
+    else:
+        logging.debug("Data points belong to different clusters")
+        # most common cluster        
+        # confidence
+        confidence = df_rule[df_rule["labels_kmeans"] == most_common_cluster]["distance_to_centroid_norm"].mean()
+        logging.debug(f"Confidence: {1 - confidence}")
+        
+        if lower_confidence_by_proportion:
+            # num of data points in most common cluster
+            num_points = len(df_rule[df_rule["labels_kmeans"] == most_common_cluster])
+            # proportion of data points in most common cluster
+            proportion = num_points / len(df_rule)
+            
+            confidence = confidence * proportion
+            logging.debug(f"Confidence after lowering based on proportion: {1 - confidence}")
+    if most_common_cluster == 0:
+        return 1 - confidence, confidence/2, confidence/2
+    elif most_common_cluster == 1:
+        return confidence/2, 1 - confidence, confidence/2
+    else:
+        raise ValueError("Most common cluster is not 0 or 1")
 
 
 def natural_breaks(data, k=5, append_infinity=False):

@@ -5,6 +5,7 @@ import random
 # Mass asigment function are represented as 4-tuple:
 #  (m_null = 0, m_cls_0, m_cls_1, m_either)
 import torch
+from utils import filter_by_rule
 
 
 def dempster_rule(m1, m2):
@@ -104,6 +105,15 @@ def create_full_uncertainty():
     """
     return 0, 0, 0, 1
 
+def create_uncertainty_kmeans(data, pred):
+    assert "labels_kmeans" in data.columns, "No kmeans labels in data"
+    
+    confidence = filter_by_rule(data, pred)
+    print(confidence)
+    return confidence
+    # raise NotImplementedError
+    
+    
 
 def create_random_maf(uncertainty=0.8):
     """
@@ -113,6 +123,7 @@ def create_random_maf(uncertainty=0.8):
     """
     a = random.random() * (1 - uncertainty)
     return 0, a, 1 - a - uncertainty, uncertainty
+
 
 
 def create_random_maf_k(k, uncertainty=0.5):
