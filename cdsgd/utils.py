@@ -45,7 +45,7 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         
 
     """
-    required_columns = ["labels_kmeans", "distance_to_centroid_norm"]
+    required_columns = ["labels_clustering", "distance_norm"]
     for column in required_columns:
         assert column in df.columns, f"{column} column not found in DataFrame"
     
@@ -64,31 +64,31 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         fig.show()
         return fig 
     
-    num_labels = df_rule["labels_kmeans"].nunique()
+    num_labels = df_rule["labels_clustering"].nunique()
     
     logging.debug(f"Number of data points left after filtering: {len(df_rule)}")
     logging.debug(f"Number of clusters left after filtering: {num_labels}")  
     
-    most_common_cluster = df_rule["labels_kmeans"].mode().values[0]
+    most_common_cluster = df_rule["labels_clustering"].mode().values[0]
     logging.debug(f"Most common cluster: {most_common_cluster}")
 
     
-    if df_rule["labels_kmeans"].nunique() == 1:
+    if df_rule["labels_clustering"].nunique() == 1:
         
         logging.debug("All data points belong to the same cluster")
-        confidence = df_rule["distance_to_centroid_norm"].mean()
+        confidence = df_rule["distance_norm"].mean()
         
         logging.debug(f"Confidence: {1 - confidence}")
     else:
         logging.debug("Data points belong to different clusters")
         # most common cluster        
         # confidence
-        confidence = df_rule[df_rule["labels_kmeans"] == most_common_cluster]["distance_to_centroid_norm"].mean()
+        confidence = df_rule[df_rule["labels_clustering"] == most_common_cluster]["distance_norm"].mean()
         logging.debug(f"Confidence: {1 - confidence}")
         
         if lower_confidence_by_proportion:
             # num of data points in most common cluster
-            num_points = len(df_rule[df_rule["labels_kmeans"] == most_common_cluster])
+            num_points = len(df_rule[df_rule["labels_clustering"] == most_common_cluster])
             # proportion of data points in most common cluster
             proportion = num_points / len(df_rule)
             

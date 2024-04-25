@@ -106,7 +106,7 @@ def create_full_uncertainty():
     return 0, 0, 0, 1
 
 def create_uncertainty_kmeans(data, pred):
-    assert "labels_kmeans" in data.columns, "No kmeans labels in data"
+    assert "labels_clustering" in data.columns, "No kmeans labels in data"
     
     masses = filter_by_rule(data, pred)
     return masses
