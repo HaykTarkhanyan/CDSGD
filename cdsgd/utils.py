@@ -27,12 +27,13 @@ def detect_outliers_z_score(data, threshold=OUTLIER_THRESHOLD_NUM_STD):
     return outliers
 
 def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None, dataset=None, 
-                   name=None, save_results=False, save_path=None, print_results=True):
+                   name=None, save_results=False, save_path=None, print_results=True, 
+                   breaks=3, mult_rules=False):
     if epoch and dt and losses:
         if print_results:
-            logging.info(f"Training Time: {dt:.2f}s")
-            logging.info(f"Epochs: {epoch+1}")
-            logging.info(f"Min Loss: {losses[-1]:.3f}")
+            logging.debug(f"Training Time: {dt:.2f}s")
+            logging.debug(f"Epochs: {epoch+1}")
+            logging.debug(f"Min Loss: {losses[-1]:.3f}")
             px.line(losses, markers=True).show()
     
     accuracy = accuracy_score(y_test, y_pred)
@@ -40,9 +41,9 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
     conf_matrix = confusion_matrix(y_test, y_pred)
     
     if print_results:
-        logging.info(f"Accuracy:  {accuracy:.2f}")
-        logging.info(f"F1 Score: {f1:.2f}")
-        logging.info(f"Confusion Matrix: \n{conf_matrix}")
+        logging.debug(f"Accuracy:  {accuracy:.2f}")
+        logging.debug(f"F1 Score: {f1:.2f}")
+        logging.debug(f"Confusion Matrix: \n{conf_matrix}")
     
     if save_results:
         now = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
@@ -51,6 +52,7 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
         if name is None:
             name = "No name"
         res_row = {"name": name, "MAF method": method, "dataset": dataset,
+                    "breaks": breaks, "mult_rules": mult_rules,        
                    "accuracy": accuracy, "f1": f1, 
                     "confusion_matrix": conf_matrix, 
                     "training_time": dt, "epochs": epoch+1,"min_loss": losses[-1], 
@@ -61,7 +63,7 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
         res_df.to_csv(save_path, index=False)
 
 def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
-                   only_plot=False):
+                   only_plot=False, print_results=False):
     """
     Filters a DataFrame based on a given rule lambda function and calculates the confidence score.
 
@@ -107,26 +109,26 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         return fig 
     
     num_labels = df_rule["labels_clustering"].nunique()
-    
-    logging.debug(f"Number of data points left after filtering: {len(df_rule)}")
-    logging.debug(f"Number of clusters left after filtering: {num_labels}")  
+    if print_results:
+        logging.debug(f"Number of data points left after filtering: {len(df_rule)}")
+        logging.debug(f"Number of clusters left after filtering: {num_labels}")  
     
     most_common_cluster = df_rule["labels_clustering"].mode().values[0]
-    logging.debug(f"Most common cluster: {most_common_cluster}")
+    if print_results: logging.debug(f"Most common cluster: {most_common_cluster}")
 
     
     if df_rule["labels_clustering"].nunique() == 1:
         
-        logging.debug("All data points belong to the same cluster")
+        if print_results: logging.debug("All data points belong to the same cluster")
         confidence = df_rule["distance_norm"].mean()
         
-        logging.debug(f"Confidence: {1 - confidence}")
+        if print_results: logging.debug(f"Confidence: {1 - confidence}")
     else:
-        logging.debug("Data points belong to different clusters")
+        if print_results: logging.debug("Data points belong to different clusters")
         # most common cluster        
         # confidence
         confidence = df_rule[df_rule["labels_clustering"] == most_common_cluster]["distance_norm"].mean()
-        logging.debug(f"Confidence: {1 - confidence}")
+        if print_results: logging.debug(f"Confidence: {1 - confidence}")
         
         if lower_confidence_by_proportion:
             # num of data points in most common cluster
@@ -135,7 +137,7 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
             proportion = num_points / len(df_rule)
             
             confidence = confidence * proportion
-            logging.debug(f"Confidence after lowering based on proportion: {1 - confidence}")
+            if print_results: logging.debug(f"Confidence after lowering based on proportion: {1 - confidence}")
     if most_common_cluster == 0:
         return 1 - confidence, confidence/2, confidence/2
     elif most_common_cluster == 1:

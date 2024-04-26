@@ -1,83 +1,148 @@
-24-04-26 18:20:56 - __main__ - DEBUG - test
-24-04-26 18:21:23 - __main__ - DEBUG - test
-24-04-26 18:21:31 - __main__ - DEBUG - test
-24-04-26 18:21:33 - __main__ - DEBUG - test
-24-04-26 18:21:53 - __main__ - DEBUG - test
-24-04-26 18:22:07 - __main__ - DEBUG - test
-24-04-26 18:22:18 - __main__ - DEBUG - test
-24-04-26 18:22:21 - __main__ - DEBUG - test
-24-04-26 18:22:39 - __main__ - DEBUG - s
-24-04-26 18:23:03 - [DEBUG] - s
-24-04-26 18:23:46 [DEBUG] s
-24-04-26 18:23:48 [INFO] Found 1 datasets
-24-04-26 18:23:52 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
-24-04-26 18:23:59 [INFO] Step 0: Data split done | 2633 - 1129
-24-04-26 18:24:00 [DEBUG] Step 1: Standard scaling complete
-24-04-26 18:24:02 [INFO] Step 2: Performing clustering
-24-04-26 18:24:04 [DEBUG] Evaluation on train
-24-04-26 18:24:04 [DEBUG] 	silhouette = 0.576
-24-04-26 18:24:04 [DEBUG] 	calinski_harabasz = 4271.135
-24-04-26 18:24:04 [DEBUG] 	inertia = 226439514.251
-24-04-26 18:24:04 [DEBUG] Evaluation on test
-24-04-26 18:24:04 [DEBUG] 	silhouette = 0.596
-24-04-26 18:24:04 [DEBUG] 	calinski_harabasz = 1865.18
-24-04-26 18:24:04 [INFO] Step 2: Clustering done
-24-04-26 18:24:06 [DEBUG] Evaluation on train
-24-04-26 18:24:06 [DEBUG] 	Accuracy:  0.65
-24-04-26 18:24:06 [DEBUG] 	F1 Score: 0.54
-24-04-26 18:24:06 [DEBUG] 	Confusion Matrix: 
-[[1190  232]
- [ 682  529]]
-24-04-26 18:24:06 [DEBUG] Evaluation on test
-24-04-26 18:24:06 [DEBUG] 	Accuracy:  0.68
-24-04-26 18:24:06 [DEBUG] 	F1 Score: 0.54
-24-04-26 18:24:06 [DEBUG] 	Confusion Matrix: 
-[[551 106]
- [256 216]]
-24-04-26 18:37:25 [INFO] Step 2: Performing clustering
-24-04-26 18:37:25 [DEBUG] Evaluation on train
-24-04-26 18:37:25 [DEBUG] 	silhouette = 0.576
-24-04-26 18:37:25 [DEBUG] 	calinski_harabasz = 4271.135
-24-04-26 18:37:25 [DEBUG] 	inertia = 226439514.251
-24-04-26 18:37:25 [DEBUG] Evaluation on test
-24-04-26 18:37:25 [DEBUG] 	silhouette = 0.596
-24-04-26 18:37:25 [DEBUG] 	calinski_harabasz = 1865.18
-24-04-26 18:37:25 [INFO] Step 2: Clustering done
-24-04-26 18:37:28 [DEBUG] Evaluation on train
-24-04-26 18:37:28 [DEBUG] 	Accuracy:  0.65
-24-04-26 18:37:28 [DEBUG] 	F1 Score: 0.54
-24-04-26 18:37:28 [DEBUG] 	Confusion Matrix: 
-[[1190  232]
- [ 682  529]]
-24-04-26 18:37:28 [DEBUG] Evaluation on test
-24-04-26 18:37:28 [DEBUG] 	Accuracy:  0.68
-24-04-26 18:37:28 [DEBUG] 	F1 Score: 0.54
-24-04-26 18:37:28 [DEBUG] 	Confusion Matrix: 
-[[551 106]
- [256 216]]
-24-04-26 18:37:56 [DEBUG] s
-24-04-26 18:37:56 [INFO] Found 1 datasets
-24-04-26 18:37:57 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
-24-04-26 18:37:58 [INFO] Step 0: Data split done | 2633 - 1129
-24-04-26 18:37:59 [DEBUG] Step 1: Standard scaling complete
-24-04-26 18:38:00 [INFO] Step 2: Performing clustering
-24-04-26 18:38:01 [DEBUG] Evaluation on train
-24-04-26 18:38:01 [DEBUG] 	silhouette = 0.587
-24-04-26 18:38:01 [DEBUG] 	calinski_harabasz = 4402.625
-24-04-26 18:38:01 [DEBUG] 	inertia = 235854577.766
-24-04-26 18:38:01 [DEBUG] Evaluation on test
-24-04-26 18:38:01 [DEBUG] 	silhouette = 0.577
-24-04-26 18:38:01 [DEBUG] 	calinski_harabasz = 1713.531
-24-04-26 18:38:01 [INFO] Step 2: Clustering done
-24-04-26 18:38:04 [DEBUG] Evaluation on train
-24-04-26 18:38:04 [DEBUG] 	Accuracy:  0.67
-24-04-26 18:38:04 [DEBUG] 	F1 Score: 0.55
-24-04-26 18:38:04 [DEBUG] 	Confusion Matrix: 
-[[1218  225]
- [ 654  536]]
-24-04-26 18:38:04 [DEBUG] Evaluation on test
-24-04-26 18:38:04 [DEBUG] 	Accuracy:  0.65
-24-04-26 18:38:04 [DEBUG] 	F1 Score: 0.49
-24-04-26 18:38:04 [DEBUG] 	Confusion Matrix: 
-[[538  98]
- [300 193]]
+24-04-26 19:43:59 [INFO] Found 1 datasets
+24-04-26 19:44:05 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
+24-04-26 19:44:08 [INFO] Step 0: Data split done | 2633 - 1129
+24-04-26 19:44:09 [DEBUG] Step 1: Standard scaling complete
+24-04-26 19:44:11 [INFO] Step 2: Performing clustering
+24-04-26 19:44:12 [DEBUG] Evaluation on train
+24-04-26 19:44:12 [DEBUG] 	silhouette = 0.58
+24-04-26 19:44:12 [DEBUG] 	calinski_harabasz = 4332.35
+24-04-26 19:44:12 [DEBUG] 	inertia = 227041645.157
+24-04-26 19:44:12 [DEBUG] Evaluation on test
+24-04-26 19:44:12 [DEBUG] 	silhouette = 0.584
+24-04-26 19:44:12 [DEBUG] 	calinski_harabasz = 1802.325
+24-04-26 19:44:12 [INFO] Step 2: Clustering done
+24-04-26 19:44:13 [DEBUG] Evaluation on train
+24-04-26 19:44:13 [DEBUG] 	Accuracy:  0.66
+24-04-26 19:44:13 [DEBUG] 	F1 Score: 0.53
+24-04-26 19:44:13 [DEBUG] 	Confusion Matrix: 
+[[1203  254]
+ [ 654  522]]
+24-04-26 19:44:13 [DEBUG] Evaluation on test
+24-04-26 19:44:13 [DEBUG] 	Accuracy:  0.67
+24-04-26 19:44:13 [DEBUG] 	F1 Score: 0.55
+24-04-26 19:44:13 [DEBUG] 	Confusion Matrix: 
+[[535  87]
+ [281 226]]
+24-04-26 19:44:13 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-26 19:44:19 [INFO] Step 4: Distance calculation done
+24-04-26 19:44:21 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 19:44:21 [DEBUG] 	Model init done
+24-04-26 19:44:41 [DEBUG] 	Model fit done
+24-04-26 19:44:41 [INFO] Step 6: Inference done
+24-04-26 19:44:41 [INFO] ------------------------------
+24-04-26 19:44:41 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:44:41 [DEBUG] 	Model init done
+24-04-26 19:44:42 [DEBUG] 	Model fit done
+24-04-26 19:44:43 [INFO] Step 6: Inference done
+24-04-26 19:44:43 [INFO] ------------------------------
+24-04-26 19:47:15 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:47:15 [DEBUG] 	Model init done
+24-04-26 19:47:18 [DEBUG] 	Model fit done
+24-04-26 19:47:18 [INFO] Step 6: Inference done
+24-04-26 19:47:18 [INFO] ------------------------------
+24-04-26 19:47:41 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:47:41 [DEBUG] 	Model init done
+24-04-26 19:47:43 [DEBUG] 	Model fit done
+24-04-26 19:47:44 [INFO] Step 6: Inference done
+24-04-26 19:47:44 [INFO] ------------------------------
+24-04-26 19:48:39 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:48:39 [DEBUG] 	Model init done
+24-04-26 19:48:41 [DEBUG] 	Model fit done
+24-04-26 19:48:42 [INFO] Step 6: Inference done
+24-04-26 19:48:42 [INFO] ------------------------------
+24-04-26 19:48:42 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 19:48:42 [DEBUG] 	Model init done
+24-04-26 19:48:59 [DEBUG] 	Model fit done
+24-04-26 19:48:59 [INFO] Step 6: Inference done
+24-04-26 19:48:59 [INFO] ------------------------------
+24-04-26 19:50:05 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:50:05 [DEBUG] 	Model init done
+24-04-26 19:51:10 [DEBUG] 	Model fit done
+24-04-26 19:51:10 [INFO] Step 6: Inference done
+24-04-26 19:51:10 [INFO] ------------------------------
+24-04-26 19:51:10 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 19:51:10 [DEBUG] 	Model init done
+24-04-26 19:53:18 [DEBUG] 	Model fit done
+24-04-26 19:53:18 [INFO] Step 6: Inference done
+24-04-26 19:53:18 [INFO] ------------------------------
+24-04-26 19:54:16 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 19:54:16 [DEBUG] 	Model init done
+24-04-26 19:55:22 [DEBUG] 	Model fit done
+24-04-26 19:55:23 [INFO] Step 6: Inference done
+24-04-26 19:55:23 [INFO] Training Time: 61.13s
+24-04-26 19:55:23 [INFO] Epochs: 80
+24-04-26 19:55:23 [INFO] Min Loss: 0.025
+24-04-26 19:55:26 [INFO] Accuracy:  0.98
+24-04-26 19:55:26 [INFO] F1 Score: 0.98
+24-04-26 19:55:26 [INFO] Confusion Matrix: 
+[[616   6]
+ [ 13 494]]
+24-04-26 19:55:26 [INFO] ------------------------------
+24-04-26 19:55:26 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 19:55:26 [DEBUG] 	Model init done
+24-04-26 19:56:53 [DEBUG] 	Model fit done
+24-04-26 19:56:54 [INFO] Step 6: Inference done
+24-04-26 19:56:54 [INFO] Training Time: 86.99s
+24-04-26 19:56:54 [INFO] Epochs: 123
+24-04-26 19:56:54 [INFO] Min Loss: 0.028
+24-04-26 19:56:54 [INFO] Accuracy:  0.98
+24-04-26 19:56:54 [INFO] F1 Score: 0.98
+24-04-26 19:56:54 [INFO] Confusion Matrix: 
+[[619   3]
+ [ 14 493]]
+24-04-26 19:56:54 [INFO] ------------------------------
+24-04-26 20:00:24 [INFO] Found 2 rules
+24-04-26 20:14:20 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 20:14:20 [DEBUG] 	Model init done
+24-04-26 20:14:20 [DEBUG] 	Model fit done
+24-04-26 20:14:21 [INFO] Step 6: Inference done
+24-04-26 20:14:21 [INFO] Training Time: 0.11s
+24-04-26 20:14:21 [INFO] Epochs: 4
+24-04-26 20:14:21 [INFO] Min Loss: 0.400
+24-04-26 20:14:21 [INFO] Accuracy:  0.55
+24-04-26 20:14:21 [INFO] F1 Score: 0.00
+24-04-26 20:14:21 [INFO] Confusion Matrix: 
+[[622   0]
+ [507   0]]
+24-04-26 20:14:21 [INFO] ------------------------------
+24-04-26 20:14:21 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 20:14:21 [DEBUG] 	Model init done
+24-04-26 20:14:23 [DEBUG] 	Model fit done
+24-04-26 20:14:24 [INFO] Step 6: Inference done
+24-04-26 20:14:24 [INFO] Training Time: 2.09s
+24-04-26 20:14:24 [INFO] Epochs: 65
+24-04-26 20:14:24 [INFO] Min Loss: 0.005
+24-04-26 20:14:25 [INFO] Accuracy:  0.94
+24-04-26 20:14:25 [INFO] F1 Score: 0.93
+24-04-26 20:14:25 [INFO] Confusion Matrix: 
+[[593  29]
+ [ 40 467]]
+24-04-26 20:14:25 [INFO] ------------------------------
+24-04-26 20:15:40 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 20:15:41 [DEBUG] 	Model init done
+24-04-26 20:15:41 [DEBUG] 	Model fit done
+24-04-26 20:15:43 [INFO] Step 6: Inference done
+24-04-26 20:15:43 [INFO] Training Time: 0.21s
+24-04-26 20:15:43 [INFO] Epochs: 4
+24-04-26 20:15:43 [INFO] Min Loss: 0.400
+24-04-26 20:15:43 [INFO] Accuracy:  0.55
+24-04-26 20:15:43 [INFO] F1 Score: 0.00
+24-04-26 20:15:43 [INFO] Confusion Matrix: 
+[[622   0]
+ [507   0]]
+24-04-26 20:15:44 [INFO] ------------------------------
+24-04-26 20:15:44 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random)
+24-04-26 20:15:44 [DEBUG] 	Model init done
+24-04-26 20:15:50 [DEBUG] 	Model fit done
+24-04-26 20:15:51 [INFO] Step 6: Inference done
+24-04-26 20:15:51 [INFO] Training Time: 6.31s
+24-04-26 20:15:51 [INFO] Epochs: 73
+24-04-26 20:15:51 [INFO] Min Loss: 0.006
+24-04-26 20:15:51 [INFO] Accuracy:  0.93
+24-04-26 20:15:51 [INFO] F1 Score: 0.92
+24-04-26 20:15:51 [INFO] Confusion Matrix: 
+[[581  41]
+ [ 43 464]]
+24-04-26 20:15:51 [INFO] ------------------------------
+24-04-26 20:16:22 [INFO] Step 5: Run DST (dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans)
+24-04-26 20:16:22 [DEBUG] 	Model init done
