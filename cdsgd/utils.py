@@ -2,10 +2,18 @@ import numpy as np
 from sklearn.cluster import KMeans
 import logging 
 
+from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import confusion_matrix
+import plotly.express as px
+import datetime 
+import pandas as pd
+import os
+
 from config import LOWER_CONFIDENCE_BY_PROPORTION, OUTLIER_THRESHOLD_NUM_STD
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
-                    datefmt="%d-%b-%y %H:%M:%S")
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
+                        datefmt="%d-%b-%y %H:%M:%S")
 
 def detect_outliers_z_score(data, threshold=OUTLIER_THRESHOLD_NUM_STD):
     outliers = []
@@ -17,6 +25,40 @@ def detect_outliers_z_score(data, threshold=OUTLIER_THRESHOLD_NUM_STD):
         if np.abs(z_score) > threshold:
             outliers.append(i)
     return outliers
+
+def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None, dataset=None, 
+                   name=None, save_results=False, save_path=None, print_results=True):
+    if epoch and dt and losses:
+        if print_results:
+            logging.info(f"Training Time: {dt:.2f}s")
+            logging.info(f"Epochs: {epoch+1}")
+            logging.info(f"Min Loss: {losses[-1]:.3f}")
+            px.line(losses, markers=True).show()
+    
+    accuracy = accuracy_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred)
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    
+    if print_results:
+        logging.info(f"Accuracy:  {accuracy:.2f}")
+        logging.info(f"F1 Score: {f1:.2f}")
+        logging.info(f"Confusion Matrix: \n{conf_matrix}")
+    
+    if save_results:
+        now = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        if save_path is None:
+            save_path = f"experiments.csv"
+        if name is None:
+            name = "No name"
+        res_row = {"name": name, "MAF method": method, "dataset": dataset,
+                   "accuracy": accuracy, "f1": f1, 
+                    "confusion_matrix": conf_matrix, 
+                    "training_time": dt, "epochs": epoch+1,"min_loss": losses[-1], 
+                    "datetime": now, }
+        
+        res_df = pd.read_csv(save_path) if os.path.exists(save_path) else pd.DataFrame()
+        res_df = pd.concat([res_df, pd.DataFrame([res_row])], ignore_index=True)
+        res_df.to_csv(save_path, index=False)
 
 def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
                    only_plot=False):
@@ -55,7 +97,7 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
     df_rule = df[df["rule_applies"]]
     
     if df_rule.empty:
-        logging.info("No data points left after filtering")
+        # logging.info("No data points left after filtering")
         return 0, 0, 1 # full uncertainty
     
     if only_plot:

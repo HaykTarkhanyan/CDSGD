@@ -111,5 +111,9 @@ No name,0.8163265306122449,0.8057553956834532,"[[64  5]
  [ 0 81]]",42.84225606918335,143,0.0133490925654768,25-04-2024 01:53:57,kmeans,kmeans_uniform_df
 "kmeans_wine.csv (scaled (this time for real)), 3 single breaks",0.922051282051282,0.947075208913649,"[[ 438   79]
  [  73 1360]]",427.439959526062,104,0.0187424722504282,25-04-2024 02:01:05,random,kmeans_wine
-"kmeans_wine.csv (scaled (this time for real)), 3 single breaks",0.9241025641025641,0.9489302967563837,"[[ 427   90]
- [  58 1375]]",121.11742043495178,52,0.01336895918204466,25-04-2024 02:03:20,kmeans,kmeans_wine
+"kmeans_wine.csv (scaled (this time for real)), 3 single breaks",0.924102564102564,0.9489302967563836,"[[ 427   90]
+ [  58 1375]]",121.11742043495178,52,0.0133689591820446,25-04-2024 02:03:20,kmeans,kmeans_wine
+"kmeans_breast-cancer-wisconsin.csv (scaled), 3 single breaks, add_mult_rules, maf_method=random",0.697560975609756,0.82183908045977,"[[  0  62]
+ [  0 143]]",25.994351863861084,97,0.0159972123801708,26-04-2024 14:43:13,random,kmeans_breast-cancer-wisconsin
+"kmeans_breast-cancer-wisconsin.csv (scaled), 3 single breaks, add_mult_rules, maf_method=kmeans",0.697560975609756,0.82183908045977,"[[  0  62]
+ [  0 143]]",3.593552589416504,13,0.019000476226210594,26-04-2024 14:43:17,kmeans,kmeans_breast-cancer-wisconsin
