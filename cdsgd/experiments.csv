@@ -147,5 +147,25 @@ No name,0.8163265306122449,0.8057553956834532,"[[64  5]
  [ 40 467]]",2.08705472946167,65,0.0054955934174358,26-04-2024 20:14:25,random,Brain Tumor,3.0,False
 "dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans",0.5509300265721878,0.0,"[[622   0]
  [507   0]]",0.2059888839721679,4,0.3999851644039154,26-04-2024 20:15:44,kmeans,Brain Tumor,3.0,False
-"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random",0.9255978742249779,0.91699604743083,"[[581  41]
- [ 43 464]]",6.308354139328003,73,0.006296782288700342,26-04-2024 20:15:51,random,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random",0.925597874224978,0.91699604743083,"[[581  41]
+ [ 43 464]]",6.308354139328003,73,0.0062967822887003,26-04-2024 20:15:51,random,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans",0.9760850310008856,0.9729729729729728,"[[616   6]
+ [ 21 486]]",171.5978434085846,89,0.0186166577041149,26-04-2024 20:19:29,kmeans,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random",0.9778565101860052,0.9748743718592964,"[[619   3]
+ [ 22 485]]",264.9982295036316,126,0.0247965175658464,26-04-2024 20:23:54,random,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans",0.9317980513728964,0.9223007063572148,"[[595  49]
+ [ 28 457]]",1.4740700721740725,72,0.0013603110564872,26-04-2024 20:47:44,kmeans,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random",0.8689105403011514,0.8666666666666666,"[[500 144]
+ [  4 481]]",4.0032618045806885,103,0.0073380721732974,26-04-2024 20:47:49,random,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=True, maf_method=kmeans",0.9052258635961028,0.8970163618864292,"[[556  88]
+ [ 19 466]]",3.3893210887908936,40,0.0001826411898946,26-04-2024 20:49:33,kmeans,Brain Tumor,3.0,True
+"dataset=Brain Tumor, breaks=3, add_mult_rules=True, maf_method=random",0.8892825509300266,0.8830682881197381,"[[532 112]
+ [ 13 472]]",3.9852004051208496,35,0.0009479844011366,26-04-2024 20:49:40,random,Brain Tumor,3.0,True
+"dataset=Brain Tumor, breaks=3, add_mult_rules=True, maf_method=kmeans",0.9840566873339238,0.981443298969072,"[[635   9]
+ [  9 476]]",194.11744499206543,57,0.0220252703875303,26-04-2024 20:54:41,kmeans,Brain Tumor,3.0,True
+"dataset=Brain Tumor, breaks=3, add_mult_rules=True, maf_method=random",0.9849424269264836,0.9824922760041196,"[[635   9]
+ [  8 477]]",192.461528301239,62,0.0209976118057966,26-04-2024 20:57:55,random,Brain Tumor,3.0,True
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=kmeans",0.975199291408326,0.9708333333333332,"[[635   9]
+ [ 19 466]]",288.09473395347595,69,0.0330776460468769,26-04-2024 21:24:14,kmeans,Brain Tumor,3.0,False
+"dataset=Brain Tumor, breaks=3, add_mult_rules=False, maf_method=random",0.9822852081488043,0.9793388429752067,"[[635   9]
+ [ 11 474]]",394.81153106689453,137,0.026403477415442467,26-04-2024 21:30:50,random,Brain Tumor,3.0,False

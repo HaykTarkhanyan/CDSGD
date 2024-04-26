@@ -34,8 +34,10 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
             logging.debug(f"Training Time: {dt:.2f}s")
             logging.debug(f"Epochs: {epoch+1}")
             logging.debug(f"Min Loss: {losses[-1]:.3f}")
-            px.line(losses, markers=True).show()
-    
+            fig = px.line(losses, markers=True, title=f"Loss over epochs ({name})")
+            # fig.write_image(os.path.join("plots", f"{name}.png"))
+            fig.show()
+
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
     conf_matrix = confusion_matrix(y_test, y_pred)

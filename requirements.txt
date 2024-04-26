@@ -25,6 +25,7 @@ urllib3==1.26.11
 ipykernel
 orange3
 plotly
+kaleido==0.2.1
 # dsgd @ git+https://github.com/Sergio-P/DSGD.git
 
 # package location
