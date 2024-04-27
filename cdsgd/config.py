@@ -22,3 +22,5 @@ LOGGING_BACKUP_COUNT = 2
 penalty_rate = 0.5
 
 print_results_MAF_kmeans = False
+
+LABEL_COL_FOR_DIST = "labels_clustering"

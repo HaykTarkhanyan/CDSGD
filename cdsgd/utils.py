@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 import logging 
 
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, silhouette_score, calinski_harabasz_score
 from sklearn.metrics import confusion_matrix
 from sklearn.cluster import DBSCAN
 from sklearn.neighbors import NearestNeighbors
@@ -21,6 +21,78 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
                         datefmt="%d-%b-%y %H:%M:%S")
 
+def get_distance(df, model, alg="kmeans", density_radius=0.5):
+    if alg == "kmeans":
+        distances = np.min(
+            np.linalg.norm(df[:, np.newaxis] - model.cluster_centers_, axis=2), axis=1) 
+    else:
+        distances= calculate_adjusted_density(df, model.labels_, radius=density_radius, 
+                                              penalty_rate=penalty_rate, 
+                                              remove_outliers=False, normalize=False)
+    
+    return distances
+    
+def remove_outliers_and_normalize(df, distance_column="distance", label_column="labels"):    
+    outliers = detect_outliers_z_score(df["distance"])
+    df["outlier"] = df[distance_column].apply(lambda x: x in outliers)
+    df_no_outliers = df[~df["outlier"]]
+    
+    # min max scale the df. dont use outliers
+    min_val = df_no_outliers.groupby(label_column)[distance_column].apply('min')
+    max_val = df_no_outliers.groupby(label_column)[distance_column].apply('max')
+    
+    def scale(x, label):
+        return (x - min_val[label]) / (max_val[label] - min_val[label]) if max_val[label] > min_val[label] else 0
+        
+    dist_norm = df.apply(lambda row: scale(row[distance_column], row[label_column]), axis=1)
+    
+    return dist_norm
+
+
+def evaluate_classifier(*, y_actual, y_clust, dataset="train", print_results=False,
+                        purpose="kmeans_eval"):    
+    TP = sum((y_actual == 1) & (y_clust == 1))
+    TN = sum((y_actual == 0) & (y_clust == 0))
+    accuracy = (TP + TN) / len(y_actual)
+    if purpose == "kmeans_eval":
+        if accuracy < 0.5: # swap 1's and 0's
+            y_clust = np.array([1 if label == 0 else 0 for label in y_clust])
+
+    TP = sum((y_actual == 1) & (y_clust == 1))
+    TN = sum((y_actual == 0) & (y_clust == 0))
+    FP = sum((y_actual == 0) & (y_clust == 1))
+    FN = sum((y_actual == 1) & (y_clust == 0))
+
+    accuracy = (TP + TN) / len(y_actual)
+    f1 = TP / (TP + 0.5 * (FP + FN))
+    conf_matrix = np.array([[TN, FP], [FN, TP]])
+    # f1 = f1_score(y_actual, y_clust)
+    # conf_matrix = confusion_matrix(y_actual, y_clust)
+    
+    if print_results:
+        logging.debug(f"Evaluation on {dataset}")
+        logging.debug(f"\tAccuracy:  {accuracy:.2f}")
+        logging.debug(f"\tF1 Score: {f1:.2f}")
+        logging.debug(f"\tConfusion Matrix: \n{conf_matrix}")
+    
+    return {"accuracy": accuracy, "f1": f1, "confusion_matrix": conf_matrix}
+
+
+def evaluate_clustering(df, labels, model=None, alg="kmeans", round_digits=3, 
+                        print_results=False, dataset="train"):
+    silhouette = silhouette_score(df, labels).round(round_digits)
+    calinski_harabasz = calinski_harabasz_score(df, labels).round(round_digits)
+    
+    if alg == "kmeans" and dataset=="train":
+        inertia = round(model.inertia_,round_digits)
+        
+    
+    if print_results:
+        logging.debug(f"Evaluation on {dataset}")
+        logging.debug(f"\t{silhouette = }")
+        logging.debug(f"\t{calinski_harabasz = }")
+        if alg == "kmeans" and dataset=="train":
+            logging.debug(f"\t{inertia = }")
 
 def dbscan_predict(model, X):
     nr_samples = X.shape[0]
@@ -138,7 +210,7 @@ def detect_outliers_z_score(data, threshold=OUTLIER_THRESHOLD_NUM_STD):
 
 def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None, dataset=None, 
                    name=None, save_results=False, save_path=None, print_results=True, 
-                   breaks=3, mult_rules=False):
+                   breaks=3, mult_rules=False, clustering_alg=None, label_for_dist=None):
     if epoch and dt and losses:
         if print_results:
             logging.debug(f"Training Time: {dt:.2f}s")
@@ -169,19 +241,20 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
             save_path = f"experiments.csv"
         if name is None:
             name = "No name"
-        res_row = {"name": name, "MAF method": method, "dataset": dataset,
+        res_row = {"datetime": now, "name": name, "MAF method": method, "dataset": dataset,
                     "breaks": breaks, "mult_rules": mult_rules,        
                    "accuracy": accuracy, "f1": f1, 
                     "confusion_matrix": conf_matrix, 
                     "training_time": dt, "epochs": epoch+1,"min_loss": losses[-1], 
-                    "all_losses": losses, "datetime": now}
+                    "all_losses": losses, "clustering_alg": clustering_alg, 
+                    "label_for_dist": label_for_dist}
         
         res_df = pd.read_csv(save_path) if os.path.exists(save_path) else pd.DataFrame()
         res_df = pd.concat([res_df, pd.DataFrame([res_row])], ignore_index=True)
         res_df.to_csv(save_path, index=False)
 
 def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
-                   only_plot=False, print_results=False, label_column="labels"):
+                   only_plot=False, print_results=False, label_column=LABEL_COL_FOR_DIST):
     """
     Filters a DataFrame based on a given rule lambda function and calculates the confidence score.
 
@@ -270,7 +343,7 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
     elif most_common_cluster == 1:
         return confidence/2, 1 - confidence, confidence/2
     else:
-        raise ValueError("Most common cluster is not 0 or 1")
+        raise ValueError(f"Most common cluster is {most_common_cluster}, but should be 0 or 1")
 
 
 def natural_breaks(data, k=5, append_infinity=False):

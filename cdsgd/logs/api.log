@@ -18498,3 +18498,2183 @@
 [[ 37 209]
  [ 20 197]]
 24-04-27 20:00:00 [INFO] ------------------------------
+24-04-27 20:01:40 [INFO] Found 2 datasets
+24-04-27 20:01:41 [DEBUG] Dataset: Telecom_customer churn | Shape: (2000, 99)
+24-04-27 20:01:41 [DEBUG] (2000, 93) droped columns with more than 20% missing values
+24-04-27 20:01:42 [DEBUG] (1543, 93) drop rows with missing values
+24-04-27 20:01:42 [DEBUG] (1543, 77) drop non-numeric columns
+24-04-27 20:01:42 [INFO] ------ Dataset: Telecom_customer churn | Shape: (1543, 77) | Label ratio: 0.52 -------
+24-04-27 20:01:42 [INFO] Step 0: Data split done | 1080 - 463
+24-04-27 20:01:42 [DEBUG] Step 1: Standard scaling complete
+24-04-27 20:01:42 [INFO] Step 2.1: Performing dbscan clustering
+24-04-27 20:01:48 [INFO] Step 2.1: Clustering and inference done
+24-04-27 20:01:48 [DEBUG] Evaluation on train
+24-04-27 20:01:48 [DEBUG] 	silhouette = 0.46
+24-04-27 20:01:48 [DEBUG] 	calinski_harabasz = 127.522
+24-04-27 20:01:48 [DEBUG] Evaluation on test
+24-04-27 20:01:48 [DEBUG] 	silhouette = 0.567
+24-04-27 20:01:48 [DEBUG] 	calinski_harabasz = 139.743
+24-04-27 20:01:48 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 20:01:48 [DEBUG] Evaluation on train
+24-04-27 20:01:48 [DEBUG] 	Accuracy:  0.51
+24-04-27 20:01:48 [DEBUG] 	F1 Score: 0.65
+24-04-27 20:01:48 [DEBUG] 	Confusion Matrix: 
+[[ 66 487]
+ [ 38 489]]
+24-04-27 20:01:48 [DEBUG] Evaluation on test
+24-04-27 20:01:48 [DEBUG] 	Accuracy:  0.51
+24-04-27 20:01:48 [DEBUG] 	F1 Score: 0.64
+24-04-27 20:01:48 [DEBUG] 	Confusion Matrix: 
+[[ 33 213]
+ [ 16 201]]
+24-04-27 20:01:48 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 20:01:49 [INFO] Step 4: Distance calculation done
+24-04-27 20:02:32 [INFO] Found 2 datasets
+24-04-27 20:02:34 [DEBUG] Dataset: Telecom_customer churn | Shape: (2000, 99)
+24-04-27 20:02:34 [DEBUG] (2000, 93) droped columns with more than 20% missing values
+24-04-27 20:02:34 [DEBUG] (1543, 93) drop rows with missing values
+24-04-27 20:02:34 [DEBUG] (1543, 77) drop non-numeric columns
+24-04-27 20:02:34 [INFO] ------ Dataset: Telecom_customer churn | Shape: (1543, 77) | Label ratio: 0.52 -------
+24-04-27 20:02:34 [INFO] Step 0: Data split done | 1080 - 463
+24-04-27 20:02:34 [DEBUG] Step 1: Standard scaling complete
+24-04-27 20:02:34 [INFO] Step 2.1: Performing dbscan clustering
+24-04-27 20:02:40 [INFO] Step 2.1: Clustering and inference done
+24-04-27 20:02:40 [DEBUG] Evaluation on train
+24-04-27 20:02:40 [DEBUG] 	silhouette = 0.46
+24-04-27 20:02:40 [DEBUG] 	calinski_harabasz = 127.522
+24-04-27 20:02:40 [DEBUG] Evaluation on test
+24-04-27 20:02:40 [DEBUG] 	silhouette = 0.567
+24-04-27 20:02:40 [DEBUG] 	calinski_harabasz = 139.743
+24-04-27 20:02:40 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 20:02:40 [DEBUG] Evaluation on train
+24-04-27 20:02:40 [DEBUG] 	Accuracy:  0.51
+24-04-27 20:02:40 [DEBUG] 	F1 Score: 0.65
+24-04-27 20:02:40 [DEBUG] 	Confusion Matrix: 
+[[ 66 487]
+ [ 38 489]]
+24-04-27 20:02:40 [DEBUG] Evaluation on test
+24-04-27 20:02:40 [DEBUG] 	Accuracy:  0.51
+24-04-27 20:02:40 [DEBUG] 	F1 Score: 0.64
+24-04-27 20:02:40 [DEBUG] 	Confusion Matrix: 
+[[ 33 213]
+ [ 16 201]]
+24-04-27 20:02:40 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 20:02:41 [INFO] Step 4: Distance calculation done
+24-04-27 20:03:06 [DEBUG] Train: 1080
+24-04-27 20:03:06 [INFO] Step 5: Run DST (dataset=Telecom_customer churn, clust=dbscan breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 20:03:06 [DEBUG] 	Model init done
+24-04-27 20:03:25 [DEBUG] 	Model fit done
+24-04-27 20:03:26 [INFO] Step 6: Inference done
+24-04-27 20:03:26 [DEBUG] Training Time: 4.52s
+24-04-27 20:03:26 [DEBUG] Epochs: 9
+24-04-27 20:03:26 [DEBUG] Min Loss: 0.352
+24-04-27 20:03:26 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 20:03:26 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 20:03:26 [DEBUG] Accuracy:  0.57
+24-04-27 20:03:26 [DEBUG] F1 Score: 0.37
+24-04-27 20:03:26 [DEBUG] Confusion Matrix: 
+[[204  42]
+ [159  58]]
+24-04-27 20:03:26 [INFO] ------------------------------
+24-04-27 20:03:26 [INFO] Step 5: Run DST (dataset=Telecom_customer churn, clust=dbscan breaks=3, add_mult_rules=False, maf_method=random)
+24-04-27 20:03:26 [DEBUG] 	Model init done
+24-04-27 20:04:28 [DEBUG] 	Model fit done
+24-04-27 20:04:29 [INFO] Step 6: Inference done
+24-04-27 20:04:29 [DEBUG] Training Time: 61.70s
+24-04-27 20:04:29 [DEBUG] Epochs: 127
+24-04-27 20:04:29 [DEBUG] Min Loss: 0.185
+24-04-27 20:04:29 [DEBUG] Accuracy:  0.61
+24-04-27 20:04:29 [DEBUG] F1 Score: 0.59
+24-04-27 20:04:29 [DEBUG] Confusion Matrix: 
+[[150  96]
+ [ 85 132]]
+24-04-27 20:04:29 [INFO] ------------------------------
+24-04-27 20:07:02 [INFO] Found 2 datasets
+24-04-27 20:07:03 [DEBUG] Dataset: Telecom_customer churn | Shape: (100000, 99)
+24-04-27 20:07:03 [DEBUG] (100000, 90) droped columns with more than 20% missing values
+24-04-27 20:07:03 [DEBUG] (78334, 90) drop rows with missing values
+24-04-27 20:07:03 [DEBUG] (78334, 74) drop non-numeric columns
+24-04-27 20:07:03 [INFO] ------ Dataset: Telecom_customer churn | Shape: (78334, 74) | Label ratio: 0.52 -------
+24-04-27 20:07:06 [INFO] Step 0: Data split done | 54833 - 23501
+24-04-27 20:07:08 [DEBUG] Step 1: Standard scaling complete
+24-04-27 20:07:17 [INFO] Step 2.1: Performing dbscan clustering
+24-04-27 21:39:48 [INFO] Found 2 datasets
+24-04-27 21:39:53 [DEBUG] Dataset: Telecom_customer churn | Shape: (100000, 99)
+24-04-27 21:39:54 [DEBUG] (100000, 90) droped columns with more than 20% missing values
+24-04-27 21:39:55 [DEBUG] (78334, 90) drop rows with missing values
+24-04-27 21:39:55 [DEBUG] (78334, 74) drop non-numeric columns
+24-04-27 21:39:56 [INFO] ------ Dataset: Telecom_customer churn | Shape: (78334, 74) | Label ratio: 0.52 -------
+24-04-27 21:39:56 [INFO] Step 0: Data split done | 54833 - 23501
+24-04-27 21:39:57 [DEBUG] Step 1: Standard scaling complete
+24-04-27 21:39:57 [INFO] Step 2.1: Performing dbscan clustering
+24-04-27 23:15:53 [INFO] Found 2 datasets
+24-04-27 23:23:31 [INFO] Found 6 datasets
+24-04-27 23:25:40 [INFO] Found 6 datasets
+24-04-27 23:28:58 [INFO] Found 6 datasets
+24-04-27 23:30:32 [DEBUG] Dataset: Brain Tumor | Shape: (10, 14)
+24-04-27 23:30:32 [DEBUG] (10, 14) droped columns with more than 20% missing values
+24-04-27 23:30:32 [DEBUG] (10, 14) drop rows with missing values
+24-04-27 23:30:47 [DEBUG] Dataset: Brain Tumor | Shape: (50, 14)
+24-04-27 23:30:47 [DEBUG] (50, 14) droped columns with more than 20% missing values
+24-04-27 23:30:47 [DEBUG] (50, 14) drop rows with missing values
+24-04-27 23:31:07 [DEBUG] Dataset: Brain Tumor | Shape: (50, 14)
+24-04-27 23:31:07 [DEBUG] (50, 14) droped columns with more than 20% missing values
+24-04-27 23:31:07 [DEBUG] (50, 14) drop rows with missing values
+24-04-27 23:32:01 [DEBUG] Dataset: Brain Tumor | Shape: (50, 14)
+24-04-27 23:32:01 [DEBUG] (50, 14) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (50, 14) drop rows with missing values
+24-04-27 23:32:01 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.74)
+24-04-27 23:32:01 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (50, 13)
+24-04-27 23:32:01 [DEBUG] (50, 13) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (50, 13) drop rows with missing values
+24-04-27 23:32:01 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Label ratio is not balanced (0.6)
+24-04-27 23:32:01 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (50, 5)
+24-04-27 23:32:01 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (49, 5) drop rows with missing values
+24-04-27 23:32:01 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:32:01 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (50, 5)
+24-04-27 23:32:01 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (50, 5) drop rows with missing values
+24-04-27 23:32:01 [DEBUG] (50, 5) drop non-numeric columns
+24-04-27 23:32:01 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (50, 5) | Label ratio: 0.52 -------
+24-04-27 23:32:01 [INFO] Step 0: Data split done | 35 - 15
+24-04-27 23:32:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:32:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:32:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:32:01 [DEBUG] Evaluation on train
+24-04-27 23:32:01 [DEBUG] 	silhouette = 0.276
+24-04-27 23:32:01 [DEBUG] 	calinski_harabasz = 5.972
+24-04-27 23:32:01 [DEBUG] 	inertia = 148.183
+24-04-27 23:32:01 [DEBUG] Evaluation on test
+24-04-27 23:32:01 [DEBUG] 	silhouette = 0.274
+24-04-27 23:32:01 [DEBUG] 	calinski_harabasz = 4.076
+24-04-27 23:32:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:32:01 [DEBUG] Evaluation on train
+24-04-27 23:32:01 [DEBUG] 	Accuracy:  0.54
+24-04-27 23:32:01 [DEBUG] 	F1 Score: 0.67
+24-04-27 23:32:01 [DEBUG] 	Confusion Matrix: 
+[[ 3 15]
+ [ 1 16]]
+24-04-27 23:32:01 [DEBUG] Evaluation on test
+24-04-27 23:32:01 [DEBUG] 	Accuracy:  0.73
+24-04-27 23:32:01 [DEBUG] 	F1 Score: 0.82
+24-04-27 23:32:01 [DEBUG] 	Confusion Matrix: 
+[[2 4]
+ [0 9]]
+24-04-27 23:32:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:32:01 [ERROR] Error for dataset kmeans_rectangle_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:32:01 [DEBUG] Dataset: kmeans_uniform_df | Shape: (50, 5)
+24-04-27 23:32:01 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (50, 5) drop rows with missing values
+24-04-27 23:32:01 [DEBUG] (50, 5) drop non-numeric columns
+24-04-27 23:32:01 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (50, 5) | Label ratio: 0.54 -------
+24-04-27 23:32:01 [INFO] Step 0: Data split done | 35 - 15
+24-04-27 23:32:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:32:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:32:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:32:01 [DEBUG] Evaluation on train
+24-04-27 23:32:01 [DEBUG] 	silhouette = 0.616
+24-04-27 23:32:01 [DEBUG] 	calinski_harabasz = 70.711
+24-04-27 23:32:01 [DEBUG] 	inertia = 44.547
+24-04-27 23:32:01 [DEBUG] Evaluation on test
+24-04-27 23:32:01 [DEBUG] 	silhouette = 0.583
+24-04-27 23:32:01 [DEBUG] 	calinski_harabasz = 25.486
+24-04-27 23:32:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:32:01 [DEBUG] Evaluation on train
+24-04-27 23:32:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:32:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:32:01 [DEBUG] 	Confusion Matrix: 
+[[13  0]
+ [ 0 22]]
+24-04-27 23:32:01 [DEBUG] Evaluation on test
+24-04-27 23:32:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:32:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:32:01 [DEBUG] 	Confusion Matrix: 
+[[10  0]
+ [ 0  5]]
+24-04-27 23:32:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:32:01 [ERROR] Error for dataset kmeans_uniform_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:32:01 [DEBUG] Dataset: kmeans_wine | Shape: (50, 16)
+24-04-27 23:32:01 [DEBUG] (50, 16) droped columns with more than 20% missing values
+24-04-27 23:32:01 [DEBUG] (50, 16) drop rows with missing values
+24-04-27 23:32:01 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:32:35 [INFO] Found 6 datasets
+24-04-27 23:32:40 [DEBUG] Dataset: Brain Tumor | Shape: (50, 14)
+24-04-27 23:32:40 [DEBUG] (50, 14) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (50, 14) drop rows with missing values
+24-04-27 23:32:40 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.74)
+24-04-27 23:32:40 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (50, 13)
+24-04-27 23:32:40 [DEBUG] (50, 13) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (50, 13) drop rows with missing values
+24-04-27 23:32:40 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Label ratio is not balanced (0.6)
+24-04-27 23:32:40 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (50, 5)
+24-04-27 23:32:40 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (49, 5) drop rows with missing values
+24-04-27 23:32:40 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:32:40 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (50, 5)
+24-04-27 23:32:40 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (50, 5) drop rows with missing values
+24-04-27 23:32:40 [DEBUG] (50, 5) drop non-numeric columns
+24-04-27 23:32:40 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (50, 5) | Label ratio: 0.52 -------
+24-04-27 23:32:40 [INFO] Step 0: Data split done | 35 - 15
+24-04-27 23:32:40 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:32:40 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:32:40 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:32:40 [DEBUG] Evaluation on train
+24-04-27 23:32:40 [DEBUG] 	silhouette = 0.276
+24-04-27 23:32:40 [DEBUG] 	calinski_harabasz = 5.972
+24-04-27 23:32:40 [DEBUG] 	inertia = 148.183
+24-04-27 23:32:40 [DEBUG] Evaluation on test
+24-04-27 23:32:40 [DEBUG] 	silhouette = 0.274
+24-04-27 23:32:40 [DEBUG] 	calinski_harabasz = 4.076
+24-04-27 23:32:40 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:32:40 [DEBUG] Evaluation on train
+24-04-27 23:32:40 [DEBUG] 	Accuracy:  0.54
+24-04-27 23:32:40 [DEBUG] 	F1 Score: 0.67
+24-04-27 23:32:40 [DEBUG] 	Confusion Matrix: 
+[[ 3 15]
+ [ 1 16]]
+24-04-27 23:32:40 [DEBUG] Evaluation on test
+24-04-27 23:32:40 [DEBUG] 	Accuracy:  0.73
+24-04-27 23:32:40 [DEBUG] 	F1 Score: 0.82
+24-04-27 23:32:40 [DEBUG] 	Confusion Matrix: 
+[[2 4]
+ [0 9]]
+24-04-27 23:32:40 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:32:40 [ERROR] Error for dataset kmeans_rectangle_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:32:40 [DEBUG] Dataset: kmeans_uniform_df | Shape: (50, 5)
+24-04-27 23:32:40 [DEBUG] (50, 5) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (50, 5) drop rows with missing values
+24-04-27 23:32:40 [DEBUG] (50, 5) drop non-numeric columns
+24-04-27 23:32:40 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (50, 5) | Label ratio: 0.54 -------
+24-04-27 23:32:40 [INFO] Step 0: Data split done | 35 - 15
+24-04-27 23:32:40 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:32:40 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:32:40 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:32:40 [DEBUG] Evaluation on train
+24-04-27 23:32:40 [DEBUG] 	silhouette = 0.616
+24-04-27 23:32:40 [DEBUG] 	calinski_harabasz = 70.711
+24-04-27 23:32:40 [DEBUG] 	inertia = 44.547
+24-04-27 23:32:40 [DEBUG] Evaluation on test
+24-04-27 23:32:40 [DEBUG] 	silhouette = 0.583
+24-04-27 23:32:40 [DEBUG] 	calinski_harabasz = 25.486
+24-04-27 23:32:40 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:32:40 [DEBUG] Evaluation on train
+24-04-27 23:32:40 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:32:40 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:32:40 [DEBUG] 	Confusion Matrix: 
+[[13  0]
+ [ 0 22]]
+24-04-27 23:32:40 [DEBUG] Evaluation on test
+24-04-27 23:32:40 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:32:40 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:32:40 [DEBUG] 	Confusion Matrix: 
+[[10  0]
+ [ 0  5]]
+24-04-27 23:32:40 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:32:40 [ERROR] Error for dataset kmeans_uniform_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:32:40 [DEBUG] Dataset: kmeans_wine | Shape: (50, 16)
+24-04-27 23:32:40 [DEBUG] (50, 16) droped columns with more than 20% missing values
+24-04-27 23:32:40 [DEBUG] (50, 16) drop rows with missing values
+24-04-27 23:32:40 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:33:32 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:33:32 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:33:32 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:33:49 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:33:49 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.64)
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:33:49 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (100, 13) drop rows with missing values
+24-04-27 23:33:49 [DEBUG] (100, 13) drop non-numeric columns
+24-04-27 23:33:49 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13) | Label ratio: 0.55 -------
+24-04-27 23:33:49 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:33:49 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:33:49 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:33:49 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.399
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 49.227
+24-04-27 23:33:49 [DEBUG] 	inertia = 487.261
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.371
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 20.232
+24-04-27 23:33:49 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:33:49 [DEBUG] 	F1 Score: nan
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:33:49 [DEBUG] 	F1 Score: nan
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:33:49 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:33:49 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (98, 5) drop rows with missing values
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:33:49 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:33:49 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:33:49 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.52 -------
+24-04-27 23:33:49 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:33:49 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:33:49 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:33:49 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.526
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 90.873
+24-04-27 23:33:49 [DEBUG] 	inertia = 146.415
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.525
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 38.949
+24-04-27 23:33:49 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:33:49 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[37  0]
+ [ 0 32]]
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:33:49 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:33:49 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset kmeans_rectangle_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:33:49 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:33:49 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:33:49 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:33:49 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:33:49 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:33:49 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:33:49 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.602
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 135.016
+24-04-27 23:33:49 [DEBUG] 	inertia = 93.786
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	silhouette = 0.584
+24-04-27 23:33:49 [DEBUG] 	calinski_harabasz = 53.844
+24-04-27 23:33:49 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:33:49 [DEBUG] Evaluation on train
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:33:49 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[34  0]
+ [ 1 35]]
+24-04-27 23:33:49 [DEBUG] Evaluation on test
+24-04-27 23:33:49 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:33:49 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:33:49 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:33:49 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset kmeans_uniform_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:33:49 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:33:49 [DEBUG] (100, 16) drop rows with missing values
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:33:49 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:33:49 [INFO] ##############################
+24-04-27 23:34:01 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:34:01 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.64)
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:34:01 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (100, 13) drop rows with missing values
+24-04-27 23:34:01 [DEBUG] (100, 13) drop non-numeric columns
+24-04-27 23:34:01 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13) | Label ratio: 0.55 -------
+24-04-27 23:34:01 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:34:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:34:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:34:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.399
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 49.227
+24-04-27 23:34:01 [DEBUG] 	inertia = 487.261
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.371
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 20.232
+24-04-27 23:34:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:34:01 [DEBUG] 	F1 Score: nan
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:34:01 [DEBUG] 	F1 Score: nan
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:34:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:34:01 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (98, 5) drop rows with missing values
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:34:01 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:34:01 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:34:01 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.52 -------
+24-04-27 23:34:01 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:34:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:34:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:34:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.526
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 90.873
+24-04-27 23:34:01 [DEBUG] 	inertia = 146.415
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.525
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 38.949
+24-04-27 23:34:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:34:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[37  0]
+ [ 0 32]]
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:34:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:34:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset kmeans_rectangle_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:34:01 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:34:01 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:34:01 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:34:01 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:34:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:34:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:34:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.602
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 135.016
+24-04-27 23:34:01 [DEBUG] 	inertia = 93.786
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	silhouette = 0.584
+24-04-27 23:34:01 [DEBUG] 	calinski_harabasz = 53.844
+24-04-27 23:34:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:34:01 [DEBUG] Evaluation on train
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:34:01 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[34  0]
+ [ 1 35]]
+24-04-27 23:34:01 [DEBUG] Evaluation on test
+24-04-27 23:34:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:34:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:34:01 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:34:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset kmeans_uniform_df.csv: local variable 'db_eps' referenced before assignment
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:34:01 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:34:01 [DEBUG] (100, 16) drop rows with missing values
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:34:01 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:34:01 [INFO] ##################################################
+24-04-27 23:35:15 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:35:15 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:35:15 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.64)
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:35:15 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:35:15 [DEBUG] (100, 13) drop rows with missing values
+24-04-27 23:35:15 [DEBUG] (100, 13) drop non-numeric columns
+24-04-27 23:35:15 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13) | Label ratio: 0.55 -------
+24-04-27 23:35:15 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:35:15 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:15 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:15 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:15 [DEBUG] Evaluation on train
+24-04-27 23:35:15 [DEBUG] 	silhouette = 0.399
+24-04-27 23:35:15 [DEBUG] 	calinski_harabasz = 49.227
+24-04-27 23:35:15 [DEBUG] 	inertia = 487.261
+24-04-27 23:35:15 [DEBUG] Evaluation on test
+24-04-27 23:35:15 [DEBUG] 	silhouette = 0.371
+24-04-27 23:35:15 [DEBUG] 	calinski_harabasz = 20.232
+24-04-27 23:35:15 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:15 [DEBUG] Evaluation on train
+24-04-27 23:35:15 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:35:15 [DEBUG] 	F1 Score: nan
+24-04-27 23:35:15 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:35:15 [DEBUG] Evaluation on test
+24-04-27 23:35:15 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:35:15 [DEBUG] 	F1 Score: nan
+24-04-27 23:35:15 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:35:15 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:15 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:15 [DEBUG] Train: 70
+24-04-27 23:35:15 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:15 [DEBUG] 	Model init done
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Most common cluster is not 0 or 1
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:35:15 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:15 [DEBUG] (98, 5) drop rows with missing values
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:35:15 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:15 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:35:15 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:35:15 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.52 -------
+24-04-27 23:35:15 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:35:15 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:15 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:15 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:15 [DEBUG] Evaluation on train
+24-04-27 23:35:15 [DEBUG] 	silhouette = 0.526
+24-04-27 23:35:15 [DEBUG] 	calinski_harabasz = 90.873
+24-04-27 23:35:15 [DEBUG] 	inertia = 146.415
+24-04-27 23:35:15 [DEBUG] Evaluation on test
+24-04-27 23:35:15 [DEBUG] 	silhouette = 0.525
+24-04-27 23:35:15 [DEBUG] 	calinski_harabasz = 38.949
+24-04-27 23:35:15 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:15 [DEBUG] Evaluation on train
+24-04-27 23:35:15 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:15 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:15 [DEBUG] 	Confusion Matrix: 
+[[37  0]
+ [ 0 32]]
+24-04-27 23:35:15 [DEBUG] Evaluation on test
+24-04-27 23:35:15 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:15 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:15 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:35:15 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:15 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:15 [DEBUG] Train: 69
+24-04-27 23:35:15 [INFO] Step 5: Run DST (dataset=kmeans_rectangle_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:15 [DEBUG] 	Model init done
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [ERROR] Error for dataset kmeans_rectangle_df.csv: list index out of range
+24-04-27 23:35:15 [INFO] ##################################################
+24-04-27 23:35:15 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:35:15 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:15 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:35:15 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:35:15 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:35:15 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:35:15 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:15 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:16 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:16 [DEBUG] Evaluation on train
+24-04-27 23:35:16 [DEBUG] 	silhouette = 0.602
+24-04-27 23:35:16 [DEBUG] 	calinski_harabasz = 135.016
+24-04-27 23:35:16 [DEBUG] 	inertia = 93.786
+24-04-27 23:35:16 [DEBUG] Evaluation on test
+24-04-27 23:35:16 [DEBUG] 	silhouette = 0.584
+24-04-27 23:35:16 [DEBUG] 	calinski_harabasz = 53.844
+24-04-27 23:35:16 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:16 [DEBUG] Evaluation on train
+24-04-27 23:35:16 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:35:16 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:35:16 [DEBUG] 	Confusion Matrix: 
+[[34  0]
+ [ 1 35]]
+24-04-27 23:35:16 [DEBUG] Evaluation on test
+24-04-27 23:35:16 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:16 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:16 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:35:16 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:16 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:16 [DEBUG] Train: 70
+24-04-27 23:35:16 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:16 [DEBUG] 	Model init done
+24-04-27 23:35:16 [INFO] ##################################################
+24-04-27 23:35:16 [ERROR] Error for dataset kmeans_uniform_df.csv: list index out of range
+24-04-27 23:35:16 [INFO] ##################################################
+24-04-27 23:35:16 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:35:16 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:35:16 [DEBUG] (100, 16) drop rows with missing values
+24-04-27 23:35:16 [INFO] ##################################################
+24-04-27 23:35:16 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:35:16 [INFO] ##################################################
+24-04-27 23:35:59 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:35:59 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.64)
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:35:59 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (100, 13) drop rows with missing values
+24-04-27 23:35:59 [DEBUG] (100, 13) drop non-numeric columns
+24-04-27 23:35:59 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13) | Label ratio: 0.55 -------
+24-04-27 23:35:59 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:35:59 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:59 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:59 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.399
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 49.227
+24-04-27 23:35:59 [DEBUG] 	inertia = 487.261
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.371
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 20.232
+24-04-27 23:35:59 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:35:59 [DEBUG] 	F1 Score: nan
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:35:59 [DEBUG] 	F1 Score: nan
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:35:59 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:59 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:59 [DEBUG] Train: 70
+24-04-27 23:35:59 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:59 [DEBUG] 	Model init done
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Most common cluster is not 0 or 1
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:35:59 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (98, 5) drop rows with missing values
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:35:59 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:35:59 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:35:59 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.52 -------
+24-04-27 23:35:59 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:35:59 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:59 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:59 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.526
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 90.873
+24-04-27 23:35:59 [DEBUG] 	inertia = 146.415
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.525
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 38.949
+24-04-27 23:35:59 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:59 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[37  0]
+ [ 0 32]]
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:59 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:35:59 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:59 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:59 [DEBUG] Train: 69
+24-04-27 23:35:59 [INFO] Step 5: Run DST (dataset=kmeans_rectangle_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:59 [DEBUG] 	Model init done
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset kmeans_rectangle_df.csv: list index out of range
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:35:59 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:35:59 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:35:59 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:35:59 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:35:59 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:35:59 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:35:59 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.602
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 135.016
+24-04-27 23:35:59 [DEBUG] 	inertia = 93.786
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	silhouette = 0.584
+24-04-27 23:35:59 [DEBUG] 	calinski_harabasz = 53.844
+24-04-27 23:35:59 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:35:59 [DEBUG] Evaluation on train
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:35:59 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[34  0]
+ [ 1 35]]
+24-04-27 23:35:59 [DEBUG] Evaluation on test
+24-04-27 23:35:59 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:35:59 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:35:59 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:35:59 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:35:59 [INFO] Step 4: Distance calculation done
+24-04-27 23:35:59 [DEBUG] Train: 70
+24-04-27 23:35:59 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:35:59 [DEBUG] 	Model init done
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset kmeans_uniform_df.csv: list index out of range
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:35:59 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:35:59 [DEBUG] (100, 16) drop rows with missing values
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:35:59 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary
+24-04-27 23:35:59 [INFO] ################################################################################
+24-04-27 23:37:43 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:37:43 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:37:43 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [ERROR] Error for dataset Brain Tumor.csv: Label ratio is not balanced (0.64)
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:37:43 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:37:43 [DEBUG] (100, 13) drop rows with missing values
+24-04-27 23:37:43 [DEBUG] (100, 13) drop non-numeric columns
+24-04-27 23:37:43 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13) | Label ratio: 0.55 -------
+24-04-27 23:37:43 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:37:43 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:37:43 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:37:43 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:37:43 [DEBUG] Evaluation on train
+24-04-27 23:37:43 [DEBUG] 	silhouette = 0.399
+24-04-27 23:37:43 [DEBUG] 	calinski_harabasz = 49.227
+24-04-27 23:37:43 [DEBUG] 	inertia = 487.261
+24-04-27 23:37:43 [DEBUG] Evaluation on test
+24-04-27 23:37:43 [DEBUG] 	silhouette = 0.371
+24-04-27 23:37:43 [DEBUG] 	calinski_harabasz = 20.232
+24-04-27 23:37:43 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:37:43 [DEBUG] Evaluation on train
+24-04-27 23:37:43 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:37:43 [DEBUG] 	F1 Score: nan
+24-04-27 23:37:43 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:37:43 [DEBUG] Evaluation on test
+24-04-27 23:37:43 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:37:43 [DEBUG] 	F1 Score: nan
+24-04-27 23:37:43 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:37:43 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:37:43 [INFO] Step 4: Distance calculation done
+24-04-27 23:37:43 [DEBUG] Train: 70
+24-04-27 23:37:43 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:37:43 [DEBUG] 	Model init done
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Most common cluster is not 0 or 1
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:37:43 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:37:43 [DEBUG] (98, 5) drop rows with missing values
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [ERROR] Error for dataset kmeans_gaussian_df.csv: Dataset labels are not binary ([0.])
+24-04-27 23:37:43 [INFO] ################################################################################
+24-04-27 23:37:43 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:37:43 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:37:43 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:37:43 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:37:43 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.52 -------
+24-04-27 23:37:43 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:37:43 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:37:43 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:37:43 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:37:43 [DEBUG] Evaluation on train
+24-04-27 23:37:43 [DEBUG] 	silhouette = 0.526
+24-04-27 23:37:43 [DEBUG] 	calinski_harabasz = 90.873
+24-04-27 23:37:43 [DEBUG] 	inertia = 146.415
+24-04-27 23:37:44 [DEBUG] Evaluation on test
+24-04-27 23:37:44 [DEBUG] 	silhouette = 0.525
+24-04-27 23:37:44 [DEBUG] 	calinski_harabasz = 38.949
+24-04-27 23:37:44 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:37:44 [DEBUG] Evaluation on train
+24-04-27 23:37:44 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:37:44 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:37:44 [DEBUG] 	Confusion Matrix: 
+[[37  0]
+ [ 0 32]]
+24-04-27 23:37:44 [DEBUG] Evaluation on test
+24-04-27 23:37:44 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:37:44 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:37:44 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:37:44 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:37:44 [INFO] Step 4: Distance calculation done
+24-04-27 23:37:44 [DEBUG] Train: 69
+24-04-27 23:37:44 [INFO] Step 5: Run DST (dataset=kmeans_rectangle_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:37:44 [DEBUG] 	Model init done
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:37:44 [ERROR] Error for dataset kmeans_rectangle_df.csv: list index out of range
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:37:44 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:37:44 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:37:44 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:37:44 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:37:44 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:37:44 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:37:44 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:37:44 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:37:44 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:37:44 [DEBUG] Evaluation on train
+24-04-27 23:37:44 [DEBUG] 	silhouette = 0.602
+24-04-27 23:37:44 [DEBUG] 	calinski_harabasz = 135.016
+24-04-27 23:37:44 [DEBUG] 	inertia = 93.786
+24-04-27 23:37:44 [DEBUG] Evaluation on test
+24-04-27 23:37:44 [DEBUG] 	silhouette = 0.584
+24-04-27 23:37:44 [DEBUG] 	calinski_harabasz = 53.844
+24-04-27 23:37:44 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:37:44 [DEBUG] Evaluation on train
+24-04-27 23:37:44 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:37:44 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:37:44 [DEBUG] 	Confusion Matrix: 
+[[34  0]
+ [ 1 35]]
+24-04-27 23:37:44 [DEBUG] Evaluation on test
+24-04-27 23:37:44 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:37:44 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:37:44 [DEBUG] 	Confusion Matrix: 
+[[14  0]
+ [ 0 16]]
+24-04-27 23:37:44 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:37:44 [INFO] Step 4: Distance calculation done
+24-04-27 23:37:44 [DEBUG] Train: 70
+24-04-27 23:37:44 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:37:44 [DEBUG] 	Model init done
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:37:44 [ERROR] Error for dataset kmeans_uniform_df.csv: list index out of range
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:37:44 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:37:44 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:37:44 [DEBUG] (100, 16) drop rows with missing values
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:37:44 [ERROR] Error for dataset kmeans_wine.csv: Dataset labels are not binary ([0])
+24-04-27 23:37:44 [INFO] ################################################################################
+24-04-27 23:40:20 [INFO] ################################################################################
+24-04-27 23:40:20 [ERROR] Error for dataset kmeans_breast-cancer-wisconsin.csv: Cannot take a larger sample than population when 'replace=False'
+24-04-27 23:40:20 [INFO] ################################################################################
+24-04-27 23:41:25 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:41:25 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:41:25 [DEBUG] (93, 13) drop rows with missing values
+24-04-27 23:41:29 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:41:29 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:41:29 [DEBUG] (9, 13) drop rows with missing values
+24-04-27 23:41:29 [DEBUG] (9, 13) drop non-numeric columns
+24-04-27 23:41:29 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (9, 13) | Label ratio: 0.56 -------
+24-04-27 23:41:29 [INFO] Step 0: Data split done | 6 - 3
+24-04-27 23:41:29 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:41:29 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:41:29 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:41:29 [DEBUG] Evaluation on train
+24-04-27 23:41:29 [DEBUG] 	silhouette = 0.496
+24-04-27 23:41:29 [DEBUG] 	calinski_harabasz = 8.297
+24-04-27 23:41:29 [DEBUG] 	inertia = 23.421
+24-04-27 23:41:29 [DEBUG] Evaluation on test
+24-04-27 23:41:29 [DEBUG] 	silhouette = 0.202
+24-04-27 23:41:29 [DEBUG] 	calinski_harabasz = 2.44
+24-04-27 23:41:29 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:41:29 [DEBUG] Evaluation on train
+24-04-27 23:41:29 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:41:29 [DEBUG] 	F1 Score: nan
+24-04-27 23:41:29 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:41:29 [DEBUG] Evaluation on test
+24-04-27 23:41:29 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:41:29 [DEBUG] 	F1 Score: nan
+24-04-27 23:41:29 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:41:29 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:41:29 [INFO] Step 4: Distance calculation done
+24-04-27 23:41:30 [DEBUG] Train: 6
+24-04-27 23:41:30 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:41:30 [DEBUG] 	Model init done
+24-04-27 23:42:30 [INFO] Found 6 datasets
+24-04-27 23:42:30 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:42:30 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:42:30 [DEBUG] (9, 13) drop rows with missing values
+24-04-27 23:42:43 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:42:43 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:42:43 [DEBUG] (10, 13) drop rows with missing values
+24-04-27 23:42:44 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:42:44 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:42:45 [DEBUG] (8, 13) drop rows with missing values
+24-04-27 23:42:46 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:42:46 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:42:46 [DEBUG] (9, 13) drop rows with missing values
+24-04-27 23:42:48 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (10, 13)
+24-04-27 23:42:48 [DEBUG] (10, 13) droped columns with more than 20% missing values
+24-04-27 23:42:48 [DEBUG] (10, 13) drop rows with missing values
+24-04-27 23:42:52 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (500, 13)
+24-04-27 23:42:52 [DEBUG] (500, 13) droped columns with more than 20% missing values
+24-04-27 23:42:52 [DEBUG] (478, 13) drop rows with missing values
+24-04-27 23:43:06 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (100, 13)
+24-04-27 23:43:06 [DEBUG] (100, 13) droped columns with more than 20% missing values
+24-04-27 23:43:06 [DEBUG] (94, 13) drop rows with missing values
+24-04-27 23:43:10 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (200, 13)
+24-04-27 23:43:10 [DEBUG] (200, 13) droped columns with more than 20% missing values
+24-04-27 23:43:10 [DEBUG] (196, 13) drop rows with missing values
+24-04-27 23:44:10 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (200, 13)
+24-04-27 23:44:10 [DEBUG] (200, 13) droped columns with more than 20% missing values
+24-04-27 23:44:10 [DEBUG] (193, 13) drop rows with missing values
+24-04-27 23:44:14 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (200, 13)
+24-04-27 23:44:14 [DEBUG] (200, 13) droped columns with more than 20% missing values
+24-04-27 23:44:14 [DEBUG] (197, 13) drop rows with missing values
+24-04-27 23:44:14 [DEBUG] (197, 13) drop non-numeric columns
+24-04-27 23:44:14 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (197, 13) | Label ratio: 0.68 -------
+24-04-27 23:44:14 [INFO] Step 0: Data split done | 137 - 60
+24-04-27 23:44:14 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:44:14 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:44:14 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:44:14 [DEBUG] Evaluation on train
+24-04-27 23:44:14 [DEBUG] 	silhouette = 0.52
+24-04-27 23:44:14 [DEBUG] 	calinski_harabasz = 137.586
+24-04-27 23:44:14 [DEBUG] 	inertia = 814.203
+24-04-27 23:44:14 [DEBUG] Evaluation on test
+24-04-27 23:44:14 [DEBUG] 	silhouette = 0.513
+24-04-27 23:44:14 [DEBUG] 	calinski_harabasz = 64.844
+24-04-27 23:44:14 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:44:14 [DEBUG] Evaluation on train
+24-04-27 23:44:14 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:44:14 [DEBUG] 	F1 Score: nan
+24-04-27 23:44:14 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:44:14 [DEBUG] Evaluation on test
+24-04-27 23:44:14 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:44:14 [DEBUG] 	F1 Score: nan
+24-04-27 23:44:14 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:44:14 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:44:14 [INFO] Step 4: Distance calculation done
+24-04-27 23:44:14 [DEBUG] Train: 137
+24-04-27 23:44:14 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:44:14 [DEBUG] 	Model init done
+24-04-27 23:44:28 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (200, 13)
+24-04-27 23:44:28 [DEBUG] (200, 13) droped columns with more than 20% missing values
+24-04-27 23:44:28 [DEBUG] (192, 13) drop rows with missing values
+24-04-27 23:44:28 [DEBUG] (192, 13) drop non-numeric columns
+24-04-27 23:44:28 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (192, 13) | Label ratio: 0.61 -------
+24-04-27 23:44:28 [INFO] Step 0: Data split done | 134 - 58
+24-04-27 23:44:28 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:44:28 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:44:28 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:44:28 [DEBUG] Evaluation on train
+24-04-27 23:44:28 [DEBUG] 	silhouette = 0.479
+24-04-27 23:44:28 [DEBUG] 	calinski_harabasz = 123.822
+24-04-27 23:44:28 [DEBUG] 	inertia = 829.701
+24-04-27 23:44:28 [DEBUG] Evaluation on test
+24-04-27 23:44:28 [DEBUG] 	silhouette = 0.437
+24-04-27 23:44:28 [DEBUG] 	calinski_harabasz = 42.194
+24-04-27 23:44:28 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:44:28 [DEBUG] Evaluation on train
+24-04-27 23:44:28 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:44:28 [DEBUG] 	F1 Score: nan
+24-04-27 23:44:28 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:44:28 [DEBUG] Evaluation on test
+24-04-27 23:44:28 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:44:28 [DEBUG] 	F1 Score: nan
+24-04-27 23:44:28 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:44:28 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:44:28 [INFO] Step 4: Distance calculation done
+24-04-27 23:44:28 [DEBUG] Train: 134
+24-04-27 23:44:28 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:44:28 [DEBUG] 	Model init done
+24-04-27 23:45:01 [DEBUG] Dataset: kmeans_breast-cancer-wisconsin | Shape: (200, 13)
+24-04-27 23:45:01 [DEBUG] (200, 13) droped columns with more than 20% missing values
+24-04-27 23:45:01 [DEBUG] (193, 13) drop rows with missing values
+24-04-27 23:45:01 [DEBUG] (193, 13) drop non-numeric columns
+24-04-27 23:45:01 [INFO] ------ Dataset: kmeans_breast-cancer-wisconsin | Shape: (193, 13) | Label ratio: 0.64 -------
+24-04-27 23:45:01 [INFO] Step 0: Data split done | 135 - 58
+24-04-27 23:45:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:45:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:45:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:45:01 [DEBUG] Evaluation on train
+24-04-27 23:45:01 [DEBUG] 	silhouette = 0.521
+24-04-27 23:45:01 [DEBUG] 	calinski_harabasz = 132.448
+24-04-27 23:45:01 [DEBUG] 	inertia = 811.685
+24-04-27 23:45:01 [DEBUG] Evaluation on test
+24-04-27 23:45:01 [DEBUG] 	silhouette = 0.484
+24-04-27 23:45:01 [DEBUG] 	calinski_harabasz = 60.434
+24-04-27 23:45:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:45:01 [DEBUG] Evaluation on train
+24-04-27 23:45:01 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:45:01 [DEBUG] 	F1 Score: nan
+24-04-27 23:45:01 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:45:01 [DEBUG] Evaluation on test
+24-04-27 23:45:01 [DEBUG] 	Accuracy:  0.00
+24-04-27 23:45:01 [DEBUG] 	F1 Score: nan
+24-04-27 23:45:01 [DEBUG] 	Confusion Matrix: 
+[[0 0]
+ [0 0]]
+24-04-27 23:45:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:45:01 [INFO] Step 4: Distance calculation done
+24-04-27 23:45:01 [DEBUG] Train: 135
+24-04-27 23:45:01 [INFO] Step 5: Run DST (dataset=kmeans_breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:45:01 [DEBUG] 	Model init done
+24-04-27 23:50:26 [INFO] Found 6 datasets
+24-04-27 23:50:33 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (200, 10)
+24-04-27 23:50:33 [DEBUG] (200, 10) droped columns with more than 20% missing values
+24-04-27 23:50:33 [DEBUG] (200, 10) drop rows with missing values
+24-04-27 23:50:33 [DEBUG] (200, 10) drop non-numeric columns
+24-04-27 23:50:33 [INFO] ------ Dataset: breast-cancer-wisconsin | Shape: (200, 10) | Label ratio: 0.68 -------
+24-04-27 23:50:33 [INFO] Step 0: Data split done | 140 - 60
+24-04-27 23:50:33 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:50:33 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:50:33 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:50:33 [DEBUG] Evaluation on train
+24-04-27 23:50:33 [DEBUG] 	silhouette = 0.63
+24-04-27 23:50:33 [DEBUG] 	calinski_harabasz = 207.415
+24-04-27 23:50:33 [DEBUG] 	inertia = 559.326
+24-04-27 23:50:33 [DEBUG] Evaluation on test
+24-04-27 23:50:33 [DEBUG] 	silhouette = 0.611
+24-04-27 23:50:33 [DEBUG] 	calinski_harabasz = 84.981
+24-04-27 23:50:33 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:50:33 [DEBUG] Evaluation on train
+24-04-27 23:50:33 [DEBUG] 	Accuracy:  0.98
+24-04-27 23:50:33 [DEBUG] 	F1 Score: 0.96
+24-04-27 23:50:33 [DEBUG] 	Confusion Matrix: 
+[[98  0]
+ [ 3 39]]
+24-04-27 23:50:33 [DEBUG] Evaluation on test
+24-04-27 23:50:33 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:50:33 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:50:33 [DEBUG] 	Confusion Matrix: 
+[[38  0]
+ [ 0 22]]
+24-04-27 23:50:33 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:50:33 [INFO] Step 4: Distance calculation done
+24-04-27 23:50:33 [DEBUG] Train: 140
+24-04-27 23:50:33 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:50:33 [DEBUG] 	Model init done
+24-04-27 23:50:38 [DEBUG] 	Model fit done
+24-04-27 23:50:38 [INFO] Step 6: Inference done
+24-04-27 23:50:38 [DEBUG] Training Time: 5.49s
+24-04-27 23:50:38 [DEBUG] Epochs: 114
+24-04-27 23:50:38 [DEBUG] Min Loss: 0.006
+24-04-27 23:50:38 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 23:50:38 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 23:50:39 [DEBUG] Accuracy:  0.98
+24-04-27 23:50:39 [DEBUG] F1 Score: 0.98
+24-04-27 23:50:39 [DEBUG] Confusion Matrix: 
+[[38  0]
+ [ 1 21]]
+24-04-27 23:51:22 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (200, 10)
+24-04-27 23:51:22 [DEBUG] (200, 10) droped columns with more than 20% missing values
+24-04-27 23:51:22 [DEBUG] (200, 10) drop rows with missing values
+24-04-27 23:51:22 [DEBUG] (200, 10) drop non-numeric columns
+24-04-27 23:51:22 [INFO] ------ Dataset: breast-cancer-wisconsin | Shape: (200, 10) | Label ratio: 0.66 -------
+24-04-27 23:51:22 [INFO] Step 0: Data split done | 140 - 60
+24-04-27 23:51:22 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:51:22 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:51:22 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:51:22 [DEBUG] Evaluation on train
+24-04-27 23:51:22 [DEBUG] 	silhouette = 0.554
+24-04-27 23:51:22 [DEBUG] 	calinski_harabasz = 183.462
+24-04-27 23:51:22 [DEBUG] 	inertia = 601.005
+24-04-27 23:51:22 [DEBUG] Evaluation on test
+24-04-27 23:51:22 [DEBUG] 	silhouette = 0.673
+24-04-27 23:51:22 [DEBUG] 	calinski_harabasz = 100.697
+24-04-27 23:51:22 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:51:22 [DEBUG] Evaluation on train
+24-04-27 23:51:22 [DEBUG] 	Accuracy:  0.96
+24-04-27 23:51:22 [DEBUG] 	F1 Score: 0.95
+24-04-27 23:51:22 [DEBUG] 	Confusion Matrix: 
+[[82  3]
+ [ 2 53]]
+24-04-27 23:51:22 [DEBUG] Evaluation on test
+24-04-27 23:51:22 [DEBUG] 	Accuracy:  0.97
+24-04-27 23:51:22 [DEBUG] 	F1 Score: 0.92
+24-04-27 23:51:22 [DEBUG] 	Confusion Matrix: 
+[[46  1]
+ [ 1 12]]
+24-04-27 23:51:22 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:51:22 [INFO] Step 4: Distance calculation done
+24-04-27 23:51:22 [DEBUG] Train: 140
+24-04-27 23:51:22 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:51:22 [DEBUG] 	Model init done
+24-04-27 23:51:25 [DEBUG] 	Model fit done
+24-04-27 23:51:25 [INFO] Step 6: Inference done
+24-04-27 23:51:25 [DEBUG] Training Time: 2.66s
+24-04-27 23:51:25 [DEBUG] Epochs: 61
+24-04-27 23:51:25 [DEBUG] Min Loss: 0.029
+24-04-27 23:51:25 [DEBUG] Accuracy:  0.95
+24-04-27 23:51:25 [DEBUG] F1 Score: 0.89
+24-04-27 23:51:25 [DEBUG] Confusion Matrix: 
+[[45  2]
+ [ 1 12]]
+24-04-27 23:51:25 [INFO] ------------------------------
+24-04-27 23:51:25 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-27 23:51:25 [DEBUG] 	Model init done
+24-04-27 23:51:32 [DEBUG] 	Model fit done
+24-04-27 23:51:32 [INFO] Step 6: Inference done
+24-04-27 23:51:32 [DEBUG] Training Time: 6.41s
+24-04-27 23:51:32 [DEBUG] Epochs: 140
+24-04-27 23:51:32 [DEBUG] Min Loss: 0.027
+24-04-27 23:51:32 [DEBUG] Accuracy:  0.95
+24-04-27 23:51:32 [DEBUG] F1 Score: 0.88
+24-04-27 23:51:32 [DEBUG] Confusion Matrix: 
+[[46  1]
+ [ 2 11]]
+24-04-27 23:51:32 [INFO] ------------------------------
+24-04-27 23:51:32 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (683, 10)
+24-04-27 23:51:32 [DEBUG] (683, 10) droped columns with more than 20% missing values
+24-04-27 23:51:32 [DEBUG] (683, 10) drop rows with missing values
+24-04-27 23:51:32 [INFO] ################################################################################
+24-04-27 23:51:32 [ERROR] Error for dataset breast-cancer-wisconsin.csv: Label ratio is not balanced (0.6500732064421669)
+24-04-27 23:51:32 [INFO] ################################################################################
+24-04-27 23:55:43 [INFO] Found 6 datasets
+24-04-27 23:56:15 [DEBUG] Dataset: Brain Tumor | Shape: (3762, 14)
+24-04-27 23:56:15 [DEBUG] (3762, 14) droped columns with more than 20% missing values
+24-04-27 23:56:15 [DEBUG] (3762, 14) drop rows with missing values
+24-04-27 23:56:15 [DEBUG] (3762, 14) drop non-numeric columns
+24-04-27 23:56:15 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
+24-04-27 23:56:15 [INFO] Step 0: Data split done | 2633 - 1129
+24-04-27 23:56:15 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:56:15 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:56:15 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:56:15 [DEBUG] Evaluation on train
+24-04-27 23:56:15 [DEBUG] 	silhouette = 0.378
+24-04-27 23:56:15 [DEBUG] 	calinski_harabasz = 1373.973
+24-04-27 23:56:15 [DEBUG] 	inertia = 22486.171
+24-04-27 23:56:15 [DEBUG] Evaluation on test
+24-04-27 23:56:15 [DEBUG] 	silhouette = 0.381
+24-04-27 23:56:15 [DEBUG] 	calinski_harabasz = 503.306
+24-04-27 23:56:15 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:56:15 [DEBUG] Evaluation on train
+24-04-27 23:56:15 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:56:15 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:56:15 [DEBUG] 	Confusion Matrix: 
+[[1460    8]
+ [  23 1142]]
+24-04-27 23:56:15 [DEBUG] Evaluation on test
+24-04-27 23:56:15 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:56:15 [DEBUG] 	F1 Score: 0.99
+24-04-27 23:56:15 [DEBUG] 	Confusion Matrix: 
+[[609   2]
+ [  8 510]]
+24-04-27 23:56:15 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:56:15 [INFO] Step 4: Distance calculation done
+24-04-27 23:56:15 [DEBUG] Train: 2633
+24-04-27 23:56:15 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:56:15 [DEBUG] 	Model init done
+24-04-27 23:57:01 [DEBUG] Dataset: Brain Tumor | Shape: (100, 14)
+24-04-27 23:57:01 [DEBUG] (100, 14) droped columns with more than 20% missing values
+24-04-27 23:57:01 [DEBUG] (100, 14) drop rows with missing values
+24-04-27 23:57:01 [DEBUG] (100, 14) drop non-numeric columns
+24-04-27 23:57:01 [INFO] ------ Dataset: Brain Tumor | Shape: (100, 14) | Label ratio: 0.59 -------
+24-04-27 23:57:01 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:57:01 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:01 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:01 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:01 [DEBUG] Evaluation on train
+24-04-27 23:57:01 [DEBUG] 	silhouette = 0.347
+24-04-27 23:57:01 [DEBUG] 	calinski_harabasz = 37.815
+24-04-27 23:57:01 [DEBUG] 	inertia = 584.795
+24-04-27 23:57:01 [DEBUG] Evaluation on test
+24-04-27 23:57:01 [DEBUG] 	silhouette = 0.335
+24-04-27 23:57:01 [DEBUG] 	calinski_harabasz = 14.036
+24-04-27 23:57:01 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:01 [DEBUG] Evaluation on train
+24-04-27 23:57:01 [DEBUG] 	Accuracy:  0.99
+24-04-27 23:57:01 [DEBUG] 	F1 Score: 0.98
+24-04-27 23:57:01 [DEBUG] 	Confusion Matrix: 
+[[40  0]
+ [ 1 29]]
+24-04-27 23:57:01 [DEBUG] Evaluation on test
+24-04-27 23:57:01 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:01 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:01 [DEBUG] 	Confusion Matrix: 
+[[19  0]
+ [ 0 11]]
+24-04-27 23:57:01 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:01 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:01 [DEBUG] Train: 70
+24-04-27 23:57:01 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:01 [DEBUG] 	Model init done
+24-04-27 23:57:03 [DEBUG] 	Model fit done
+24-04-27 23:57:03 [INFO] Step 6: Inference done
+24-04-27 23:57:03 [DEBUG] Training Time: 1.92s
+24-04-27 23:57:03 [DEBUG] Epochs: 77
+24-04-27 23:57:03 [DEBUG] Min Loss: 0.000
+24-04-27 23:57:03 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 23:57:03 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-27 23:57:04 [DEBUG] Accuracy:  0.97
+24-04-27 23:57:04 [DEBUG] F1 Score: 0.96
+24-04-27 23:57:04 [DEBUG] Confusion Matrix: 
+[[18  1]
+ [ 0 11]]
+24-04-27 23:57:04 [INFO] ------------------------------
+24-04-27 23:57:04 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-27 23:57:04 [DEBUG] 	Model init done
+24-04-27 23:57:08 [DEBUG] 	Model fit done
+24-04-27 23:57:08 [INFO] Step 6: Inference done
+24-04-27 23:57:08 [DEBUG] Training Time: 3.71s
+24-04-27 23:57:08 [DEBUG] Epochs: 143
+24-04-27 23:57:08 [DEBUG] Min Loss: 0.010
+24-04-27 23:57:08 [DEBUG] Accuracy:  0.93
+24-04-27 23:57:08 [DEBUG] F1 Score: 0.92
+24-04-27 23:57:08 [DEBUG] Confusion Matrix: 
+[[17  2]
+ [ 0 11]]
+24-04-27 23:57:08 [INFO] ------------------------------
+24-04-27 23:57:08 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (100, 10)
+24-04-27 23:57:08 [DEBUG] (100, 10) droped columns with more than 20% missing values
+24-04-27 23:57:08 [DEBUG] (100, 10) drop rows with missing values
+24-04-27 23:57:08 [DEBUG] (100, 10) drop non-numeric columns
+24-04-27 23:57:08 [INFO] ------ Dataset: breast-cancer-wisconsin | Shape: (100, 10) | Label ratio: 0.60 -------
+24-04-27 23:57:08 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:57:08 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:08 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:08 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:08 [DEBUG] Evaluation on train
+24-04-27 23:57:08 [DEBUG] 	silhouette = 0.572
+24-04-27 23:57:08 [DEBUG] 	calinski_harabasz = 98.15
+24-04-27 23:57:08 [DEBUG] 	inertia = 286.488
+24-04-27 23:57:08 [DEBUG] Evaluation on test
+24-04-27 23:57:08 [DEBUG] 	silhouette = 0.55
+24-04-27 23:57:08 [DEBUG] 	calinski_harabasz = 38.539
+24-04-27 23:57:08 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:08 [DEBUG] Evaluation on train
+24-04-27 23:57:08 [DEBUG] 	Accuracy:  0.97
+24-04-27 23:57:08 [DEBUG] 	F1 Score: 0.96
+24-04-27 23:57:08 [DEBUG] 	Confusion Matrix: 
+[[42  1]
+ [ 1 26]]
+24-04-27 23:57:08 [DEBUG] Evaluation on test
+24-04-27 23:57:08 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:08 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:08 [DEBUG] 	Confusion Matrix: 
+[[17  0]
+ [ 0 13]]
+24-04-27 23:57:08 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:08 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:08 [DEBUG] Train: 70
+24-04-27 23:57:08 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:08 [DEBUG] 	Model init done
+24-04-27 23:57:10 [DEBUG] 	Model fit done
+24-04-27 23:57:10 [INFO] Step 6: Inference done
+24-04-27 23:57:10 [DEBUG] Training Time: 1.92s
+24-04-27 23:57:10 [DEBUG] Epochs: 54
+24-04-27 23:57:10 [DEBUG] Min Loss: 0.015
+24-04-27 23:57:10 [DEBUG] Accuracy:  1.00
+24-04-27 23:57:10 [DEBUG] F1 Score: 1.00
+24-04-27 23:57:10 [DEBUG] Confusion Matrix: 
+[[17  0]
+ [ 0 13]]
+24-04-27 23:57:10 [INFO] ------------------------------
+24-04-27 23:57:10 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-27 23:57:10 [DEBUG] 	Model init done
+24-04-27 23:57:19 [DEBUG] 	Model fit done
+24-04-27 23:57:19 [INFO] Step 6: Inference done
+24-04-27 23:57:19 [DEBUG] Training Time: 8.37s
+24-04-27 23:57:19 [DEBUG] Epochs: 203
+24-04-27 23:57:19 [DEBUG] Min Loss: 0.014
+24-04-27 23:57:20 [DEBUG] Accuracy:  0.97
+24-04-27 23:57:20 [DEBUG] F1 Score: 0.96
+24-04-27 23:57:20 [DEBUG] Confusion Matrix: 
+[[17  0]
+ [ 1 12]]
+24-04-27 23:57:20 [INFO] ------------------------------
+24-04-27 23:57:20 [DEBUG] Dataset: kmeans_gaussian_df | Shape: (100, 5)
+24-04-27 23:57:20 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:57:20 [DEBUG] (96, 5) drop rows with missing values
+24-04-27 23:57:20 [DEBUG] (96, 5) drop non-numeric columns
+24-04-27 23:57:20 [INFO] ------ Dataset: kmeans_gaussian_df | Shape: (96, 5) | Label ratio: 0.56 -------
+24-04-27 23:57:20 [INFO] Step 0: Data split done | 67 - 29
+24-04-27 23:57:20 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:20 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:20 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.63
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 159.018
+24-04-27 23:57:20 [DEBUG] 	inertia = 97.202
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.62
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 65.362
+24-04-27 23:57:20 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[26  0]
+ [ 0 41]]
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  0.97
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 0.96
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[16  0]
+ [ 1 12]]
+24-04-27 23:57:20 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:20 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:20 [DEBUG] Train: 67
+24-04-27 23:57:20 [INFO] Step 5: Run DST (dataset=kmeans_gaussian_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:20 [DEBUG] 	Model init done
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [ERROR] Error for dataset kmeans_gaussian_df.csv: list index out of range
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [DEBUG] Dataset: kmeans_rectangle_df | Shape: (100, 5)
+24-04-27 23:57:20 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:57:20 [DEBUG] (99, 5) drop rows with missing values
+24-04-27 23:57:20 [DEBUG] (99, 5) drop non-numeric columns
+24-04-27 23:57:20 [INFO] ------ Dataset: kmeans_rectangle_df | Shape: (99, 5) | Label ratio: 0.58 -------
+24-04-27 23:57:20 [INFO] Step 0: Data split done | 69 - 30
+24-04-27 23:57:20 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:20 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:20 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.537
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 92.938
+24-04-27 23:57:20 [DEBUG] 	inertia = 144.525
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.539
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 43.402
+24-04-27 23:57:20 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[44  0]
+ [ 0 25]]
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[13  0]
+ [ 0 17]]
+24-04-27 23:57:20 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:20 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:20 [DEBUG] Train: 69
+24-04-27 23:57:20 [INFO] Step 5: Run DST (dataset=kmeans_rectangle_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:20 [DEBUG] 	Model init done
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [ERROR] Error for dataset kmeans_rectangle_df.csv: list index out of range
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [DEBUG] Dataset: kmeans_uniform_df | Shape: (100, 5)
+24-04-27 23:57:20 [DEBUG] (100, 5) droped columns with more than 20% missing values
+24-04-27 23:57:20 [DEBUG] (100, 5) drop rows with missing values
+24-04-27 23:57:20 [DEBUG] (100, 5) drop non-numeric columns
+24-04-27 23:57:20 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (100, 5) | Label ratio: 0.52 -------
+24-04-27 23:57:20 [INFO] Step 0: Data split done | 70 - 30
+24-04-27 23:57:20 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:20 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:20 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.598
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 134.038
+24-04-27 23:57:20 [DEBUG] 	inertia = 94.24
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	silhouette = 0.6
+24-04-27 23:57:20 [DEBUG] 	calinski_harabasz = 58.178
+24-04-27 23:57:20 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:20 [DEBUG] Evaluation on train
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[36  0]
+ [ 0 34]]
+24-04-27 23:57:20 [DEBUG] Evaluation on test
+24-04-27 23:57:20 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:20 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:20 [DEBUG] 	Confusion Matrix: 
+[[12  0]
+ [ 0 18]]
+24-04-27 23:57:20 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:20 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:20 [DEBUG] Train: 70
+24-04-27 23:57:20 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:20 [DEBUG] 	Model init done
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [ERROR] Error for dataset kmeans_uniform_df.csv: list index out of range
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [DEBUG] Dataset: kmeans_wine | Shape: (100, 16)
+24-04-27 23:57:20 [DEBUG] (100, 16) droped columns with more than 20% missing values
+24-04-27 23:57:20 [DEBUG] (98, 16) drop rows with missing values
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:20 [ERROR] Error for dataset kmeans_wine.csv: Label ratio is not balanced (0.7653061224489796)
+24-04-27 23:57:20 [INFO] ################################################################################
+24-04-27 23:57:52 [DEBUG] Dataset: kmeans_uniform_df | Shape: (200, 5)
+24-04-27 23:57:52 [DEBUG] (200, 5) droped columns with more than 20% missing values
+24-04-27 23:57:52 [DEBUG] (200, 5) drop rows with missing values
+24-04-27 23:57:52 [DEBUG] (200, 5) drop non-numeric columns
+24-04-27 23:57:52 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (200, 5) | Label ratio: 0.51 -------
+24-04-27 23:57:52 [INFO] Step 0: Data split done | 140 - 60
+24-04-27 23:57:52 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:57:52 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:57:52 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:57:52 [DEBUG] Evaluation on train
+24-04-27 23:57:52 [DEBUG] 	silhouette = 0.628
+24-04-27 23:57:52 [DEBUG] 	calinski_harabasz = 311.117
+24-04-27 23:57:52 [DEBUG] 	inertia = 172.071
+24-04-27 23:57:52 [DEBUG] Evaluation on test
+24-04-27 23:57:52 [DEBUG] 	silhouette = 0.632
+24-04-27 23:57:52 [DEBUG] 	calinski_harabasz = 145.487
+24-04-27 23:57:52 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:57:52 [DEBUG] Evaluation on train
+24-04-27 23:57:52 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:52 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:52 [DEBUG] 	Confusion Matrix: 
+[[71  0]
+ [ 0 69]]
+24-04-27 23:57:52 [DEBUG] Evaluation on test
+24-04-27 23:57:52 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:57:52 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:57:52 [DEBUG] 	Confusion Matrix: 
+[[30  0]
+ [ 0 30]]
+24-04-27 23:57:52 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:57:52 [INFO] Step 4: Distance calculation done
+24-04-27 23:57:52 [DEBUG] Train: 140
+24-04-27 23:57:52 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:57:52 [DEBUG] 	Model init done
+24-04-27 23:58:02 [INFO] Step 2.1: Performing dbscan clustering
+24-04-27 23:58:10 [DEBUG] Dataset: kmeans_uniform_df | Shape: (200, 5)
+24-04-27 23:58:10 [DEBUG] (200, 5) droped columns with more than 20% missing values
+24-04-27 23:58:10 [DEBUG] (200, 5) drop rows with missing values
+24-04-27 23:58:10 [DEBUG] (200, 5) drop non-numeric columns
+24-04-27 23:58:11 [INFO] ------ Dataset: kmeans_uniform_df | Shape: (200, 5) | Label ratio: 0.51 -------
+24-04-27 23:58:11 [INFO] Step 0: Data split done | 140 - 60
+24-04-27 23:58:11 [DEBUG] Step 1: Standard scaling complete
+24-04-27 23:58:11 [INFO] Step 2.1: Performing kmeans clustering
+24-04-27 23:58:11 [INFO] Step 2.1: Clustering and inference done
+24-04-27 23:58:11 [DEBUG] Evaluation on train
+24-04-27 23:58:11 [DEBUG] 	silhouette = 0.614
+24-04-27 23:58:11 [DEBUG] 	calinski_harabasz = 290.215
+24-04-27 23:58:11 [DEBUG] 	inertia = 180.47
+24-04-27 23:58:11 [DEBUG] Evaluation on test
+24-04-27 23:58:11 [DEBUG] 	silhouette = 0.608
+24-04-27 23:58:11 [DEBUG] 	calinski_harabasz = 119.426
+24-04-27 23:58:11 [INFO] Step 2.2: Clustering evaluation done
+24-04-27 23:58:11 [DEBUG] Evaluation on train
+24-04-27 23:58:11 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:58:11 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:58:11 [DEBUG] 	Confusion Matrix: 
+[[66  0]
+ [ 0 74]]
+24-04-27 23:58:11 [DEBUG] Evaluation on test
+24-04-27 23:58:11 [DEBUG] 	Accuracy:  1.00
+24-04-27 23:58:11 [DEBUG] 	F1 Score: 1.00
+24-04-27 23:58:11 [DEBUG] 	Confusion Matrix: 
+[[32  0]
+ [ 0 28]]
+24-04-27 23:58:11 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-27 23:58:11 [INFO] Step 4: Distance calculation done
+24-04-27 23:58:11 [DEBUG] Train: 140
+24-04-27 23:58:11 [INFO] Step 5: Run DST (dataset=kmeans_uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-27 23:58:11 [DEBUG] 	Model init done
+24-04-28 00:02:42 [INFO] Found 6 datasets
+24-04-28 00:02:45 [DEBUG] Dataset: uniform_df | Shape: (200, 3)
+24-04-28 00:02:45 [DEBUG] (200, 3) droped columns with more than 20% missing values
+24-04-28 00:02:45 [DEBUG] (200, 3) drop rows with missing values
+24-04-28 00:02:45 [DEBUG] (200, 3) drop non-numeric columns
+24-04-28 00:02:45 [INFO] ------ Dataset: uniform_df | Shape: (200, 3) | Label ratio: 0.51 -------
+24-04-28 00:02:45 [INFO] Step 0: Data split done | 140 - 60
+24-04-28 00:02:45 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:02:45 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:02:45 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:02:45 [DEBUG] Evaluation on train
+24-04-28 00:02:45 [DEBUG] 	silhouette = 0.779
+24-04-28 00:02:45 [DEBUG] 	calinski_harabasz = 946.183
+24-04-28 00:02:45 [DEBUG] 	inertia = 35.64
+24-04-28 00:02:45 [DEBUG] Evaluation on test
+24-04-28 00:02:45 [DEBUG] 	silhouette = 0.768
+24-04-28 00:02:45 [DEBUG] 	calinski_harabasz = 375.608
+24-04-28 00:02:45 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:02:45 [DEBUG] Evaluation on train
+24-04-28 00:02:45 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:02:45 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:02:45 [DEBUG] 	Confusion Matrix: 
+[[73  0]
+ [ 0 67]]
+24-04-28 00:02:46 [DEBUG] Evaluation on test
+24-04-28 00:02:46 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:02:46 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:02:46 [DEBUG] 	Confusion Matrix: 
+[[29  0]
+ [ 0 31]]
+24-04-28 00:02:46 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:02:46 [INFO] Step 4: Distance calculation done
+24-04-28 00:02:46 [DEBUG] Train: 140
+24-04-28 00:02:46 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:02:46 [DEBUG] 	Model init done
+24-04-28 00:02:52 [DEBUG] 	Model fit done
+24-04-28 00:02:52 [INFO] Step 6: Inference done
+24-04-28 00:02:52 [DEBUG] Training Time: 6.39s
+24-04-28 00:02:52 [DEBUG] Epochs: 159
+24-04-28 00:02:52 [DEBUG] Min Loss: 0.013
+24-04-28 00:02:52 [DEBUG] Accuracy:  0.97
+24-04-28 00:02:52 [DEBUG] F1 Score: 0.97
+24-04-28 00:02:52 [DEBUG] Confusion Matrix: 
+[[27  2]
+ [ 0 31]]
+24-04-28 00:02:52 [INFO] ------------------------------
+24-04-28 00:02:52 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:02:52 [DEBUG] 	Model init done
+24-04-28 00:03:04 [DEBUG] 	Model fit done
+24-04-28 00:03:04 [INFO] Step 6: Inference done
+24-04-28 00:03:04 [DEBUG] Training Time: 11.79s
+24-04-28 00:03:04 [DEBUG] Epochs: 287
+24-04-28 00:03:04 [DEBUG] Min Loss: 0.013
+24-04-28 00:03:04 [DEBUG] Accuracy:  0.97
+24-04-28 00:03:04 [DEBUG] F1 Score: 0.97
+24-04-28 00:03:04 [DEBUG] Confusion Matrix: 
+[[27  2]
+ [ 0 31]]
+24-04-28 00:03:04 [INFO] ------------------------------
+24-04-28 00:03:04 [DEBUG] Dataset: uniform_df | Shape: (100, 3)
+24-04-28 00:03:04 [DEBUG] (100, 3) droped columns with more than 20% missing values
+24-04-28 00:03:04 [DEBUG] (100, 3) drop rows with missing values
+24-04-28 00:03:04 [DEBUG] (100, 3) drop non-numeric columns
+24-04-28 00:03:04 [INFO] ------ Dataset: uniform_df | Shape: (100, 3) | Label ratio: 0.57 -------
+24-04-28 00:03:04 [INFO] Step 0: Data split done | 70 - 30
+24-04-28 00:03:04 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:03:04 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:03:04 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:03:04 [DEBUG] Evaluation on train
+24-04-28 00:03:04 [DEBUG] 	silhouette = 0.757
+24-04-28 00:03:04 [DEBUG] 	calinski_harabasz = 372.704
+24-04-28 00:03:04 [DEBUG] 	inertia = 21.602
+24-04-28 00:03:04 [DEBUG] Evaluation on test
+24-04-28 00:03:04 [DEBUG] 	silhouette = 0.781
+24-04-28 00:03:04 [DEBUG] 	calinski_harabasz = 167.748
+24-04-28 00:03:04 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:03:04 [DEBUG] Evaluation on train
+24-04-28 00:03:04 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:03:04 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:03:04 [DEBUG] 	Confusion Matrix: 
+[[32  0]
+ [ 0 38]]
+24-04-28 00:03:04 [DEBUG] Evaluation on test
+24-04-28 00:03:04 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:03:04 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:03:04 [DEBUG] 	Confusion Matrix: 
+[[11  0]
+ [ 0 19]]
+24-04-28 00:03:04 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:03:04 [INFO] Step 4: Distance calculation done
+24-04-28 00:03:04 [DEBUG] Train: 70
+24-04-28 00:03:04 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:03:04 [DEBUG] 	Model init done
+24-04-28 00:03:08 [DEBUG] 	Model fit done
+24-04-28 00:03:08 [INFO] Step 6: Inference done
+24-04-28 00:03:08 [DEBUG] Training Time: 3.04s
+24-04-28 00:03:08 [DEBUG] Epochs: 143
+24-04-28 00:03:08 [DEBUG] Min Loss: 0.019
+24-04-28 00:03:08 [DEBUG] Accuracy:  0.97
+24-04-28 00:03:08 [DEBUG] F1 Score: 0.97
+24-04-28 00:03:08 [DEBUG] Confusion Matrix: 
+[[11  0]
+ [ 1 18]]
+24-04-28 00:03:08 [INFO] ------------------------------
+24-04-28 00:03:08 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:03:08 [DEBUG] 	Model init done
+24-04-28 00:03:15 [DEBUG] 	Model fit done
+24-04-28 00:03:15 [INFO] Step 6: Inference done
+24-04-28 00:03:15 [DEBUG] Training Time: 7.48s
+24-04-28 00:03:15 [DEBUG] Epochs: 285
+24-04-28 00:03:15 [DEBUG] Min Loss: 0.021
+24-04-28 00:03:16 [DEBUG] Accuracy:  0.97
+24-04-28 00:03:16 [DEBUG] F1 Score: 0.97
+24-04-28 00:03:16 [DEBUG] Confusion Matrix: 
+[[11  0]
+ [ 1 18]]
+24-04-28 00:03:16 [INFO] ------------------------------
+24-04-28 00:04:46 [DEBUG] Dataset: Brain Tumor | Shape: (3762, 14)
+24-04-28 00:04:46 [DEBUG] (3762, 14) droped columns with more than 20% missing values
+24-04-28 00:04:46 [DEBUG] (3762, 14) drop rows with missing values
+24-04-28 00:04:46 [DEBUG] (3762, 14) drop non-numeric columns
+24-04-28 00:04:46 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
+24-04-28 00:04:46 [INFO] Step 0: Data split done | 2633 - 1129
+24-04-28 00:04:46 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:04:46 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:04:46 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:04:46 [DEBUG] Evaluation on train
+24-04-28 00:04:46 [DEBUG] 	silhouette = 0.378
+24-04-28 00:04:46 [DEBUG] 	calinski_harabasz = 1373.973
+24-04-28 00:04:46 [DEBUG] 	inertia = 22486.171
+24-04-28 00:04:46 [DEBUG] Evaluation on test
+24-04-28 00:04:46 [DEBUG] 	silhouette = 0.381
+24-04-28 00:04:46 [DEBUG] 	calinski_harabasz = 503.306
+24-04-28 00:04:46 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:04:46 [DEBUG] Evaluation on train
+24-04-28 00:04:46 [DEBUG] 	Accuracy:  0.99
+24-04-28 00:04:46 [DEBUG] 	F1 Score: 0.99
+24-04-28 00:04:46 [DEBUG] 	Confusion Matrix: 
+[[1460    8]
+ [  23 1142]]
+24-04-28 00:04:46 [DEBUG] Evaluation on test
+24-04-28 00:04:46 [DEBUG] 	Accuracy:  0.99
+24-04-28 00:04:46 [DEBUG] 	F1 Score: 0.99
+24-04-28 00:04:46 [DEBUG] 	Confusion Matrix: 
+[[609   2]
+ [  8 510]]
+24-04-28 00:04:46 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:04:46 [INFO] Step 4: Distance calculation done
+24-04-28 00:04:46 [DEBUG] Train: 2633
+24-04-28 00:04:47 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:04:47 [DEBUG] 	Model init done
+24-04-28 00:08:37 [DEBUG] 	Model fit done
+24-04-28 00:08:38 [INFO] Step 6: Inference done
+24-04-28 00:08:38 [DEBUG] Training Time: 226.09s
+24-04-28 00:08:38 [DEBUG] Epochs: 117
+24-04-28 00:08:38 [DEBUG] Min Loss: 0.018
+24-04-28 00:08:39 [DEBUG] Accuracy:  0.98
+24-04-28 00:08:39 [DEBUG] F1 Score: 0.98
+24-04-28 00:08:39 [DEBUG] Confusion Matrix: 
+[[606   5]
+ [ 16 502]]
+24-04-28 00:08:39 [INFO] ------------------------------
+24-04-28 00:08:39 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:08:39 [DEBUG] 	Model init done
+24-04-28 00:14:25 [DEBUG] 	Model fit done
+24-04-28 00:14:25 [INFO] Step 6: Inference done
+24-04-28 00:14:25 [DEBUG] Training Time: 345.85s
+24-04-28 00:14:25 [DEBUG] Epochs: 141
+24-04-28 00:14:25 [DEBUG] Min Loss: 0.026
+24-04-28 00:14:26 [DEBUG] Accuracy:  0.98
+24-04-28 00:14:26 [DEBUG] F1 Score: 0.98
+24-04-28 00:14:26 [DEBUG] Confusion Matrix: 
+[[608   3]
+ [ 14 504]]
+24-04-28 00:14:26 [INFO] ------------------------------
+24-04-28 00:14:26 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (683, 10)
+24-04-28 00:14:26 [DEBUG] (683, 10) droped columns with more than 20% missing values
+24-04-28 00:14:26 [DEBUG] (683, 10) drop rows with missing values
+24-04-28 00:14:26 [DEBUG] (683, 10) drop non-numeric columns
+24-04-28 00:14:26 [INFO] ------ Dataset: breast-cancer-wisconsin | Shape: (683, 10) | Label ratio: 0.65 -------
+24-04-28 00:14:26 [INFO] Step 0: Data split done | 478 - 205
+24-04-28 00:14:26 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:14:26 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:14:26 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:14:26 [DEBUG] Evaluation on train
+24-04-28 00:14:26 [DEBUG] 	silhouette = 0.585
+24-04-28 00:14:26 [DEBUG] 	calinski_harabasz = 657.01
+24-04-28 00:14:26 [DEBUG] 	inertia = 2008.173
+24-04-28 00:14:26 [DEBUG] Evaluation on test
+24-04-28 00:14:26 [DEBUG] 	silhouette = 0.621
+24-04-28 00:14:26 [DEBUG] 	calinski_harabasz = 345.144
+24-04-28 00:14:26 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:14:26 [DEBUG] Evaluation on train
+24-04-28 00:14:26 [DEBUG] 	Accuracy:  0.98
+24-04-28 00:14:26 [DEBUG] 	F1 Score: 0.97
+24-04-28 00:14:26 [DEBUG] 	Confusion Matrix: 
+[[307   5]
+ [  5 161]]
+24-04-28 00:14:26 [DEBUG] Evaluation on test
+24-04-28 00:14:26 [DEBUG] 	Accuracy:  0.98
+24-04-28 00:14:26 [DEBUG] 	F1 Score: 0.97
+24-04-28 00:14:26 [DEBUG] 	Confusion Matrix: 
+[[130   2]
+ [  3  70]]
+24-04-28 00:14:26 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:14:27 [INFO] Step 4: Distance calculation done
+24-04-28 00:14:27 [DEBUG] Train: 478
+24-04-28 00:14:27 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:14:27 [DEBUG] 	Model init done
+24-04-28 00:15:00 [DEBUG] 	Model fit done
+24-04-28 00:15:00 [INFO] Step 6: Inference done
+24-04-28 00:15:00 [DEBUG] Training Time: 31.66s
+24-04-28 00:15:00 [DEBUG] Epochs: 73
+24-04-28 00:15:00 [DEBUG] Min Loss: 0.023
+24-04-28 00:15:01 [DEBUG] Accuracy:  0.98
+24-04-28 00:15:01 [DEBUG] F1 Score: 0.97
+24-04-28 00:15:01 [DEBUG] Confusion Matrix: 
+[[129   3]
+ [  2  71]]
+24-04-28 00:15:01 [INFO] ------------------------------
+24-04-28 00:15:01 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:15:01 [DEBUG] 	Model init done
+24-04-28 00:15:52 [DEBUG] 	Model fit done
+24-04-28 00:15:53 [INFO] Step 6: Inference done
+24-04-28 00:15:53 [DEBUG] Training Time: 51.57s
+24-04-28 00:15:53 [DEBUG] Epochs: 108
+24-04-28 00:15:53 [DEBUG] Min Loss: 0.029
+24-04-28 00:15:53 [DEBUG] Accuracy:  0.98
+24-04-28 00:15:53 [DEBUG] F1 Score: 0.97
+24-04-28 00:15:53 [DEBUG] Confusion Matrix: 
+[[129   3]
+ [  2  71]]
+24-04-28 00:15:54 [INFO] ------------------------------
+24-04-28 00:15:54 [DEBUG] Dataset: gaussian_df | Shape: (500, 3)
+24-04-28 00:15:54 [DEBUG] (500, 3) droped columns with more than 20% missing values
+24-04-28 00:15:54 [DEBUG] (500, 3) drop rows with missing values
+24-04-28 00:15:54 [DEBUG] (500, 3) drop non-numeric columns
+24-04-28 00:15:54 [INFO] ------ Dataset: gaussian_df | Shape: (500, 3) | Label ratio: 0.50 -------
+24-04-28 00:15:54 [INFO] Step 0: Data split done | 350 - 150
+24-04-28 00:15:54 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:15:54 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:15:54 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:15:54 [DEBUG] Evaluation on train
+24-04-28 00:15:54 [DEBUG] 	silhouette = 0.719
+24-04-28 00:15:54 [DEBUG] 	calinski_harabasz = 1653.432
+24-04-28 00:15:54 [DEBUG] 	inertia = 182.569
+24-04-28 00:15:54 [DEBUG] Evaluation on test
+24-04-28 00:15:54 [DEBUG] 	silhouette = 0.727
+24-04-28 00:15:54 [DEBUG] 	calinski_harabasz = 764.49
+24-04-28 00:15:54 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:15:54 [DEBUG] Evaluation on train
+24-04-28 00:15:54 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:15:54 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:15:54 [DEBUG] 	Confusion Matrix: 
+[[179   0]
+ [  0 171]]
+24-04-28 00:15:54 [DEBUG] Evaluation on test
+24-04-28 00:15:54 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:15:54 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:15:54 [DEBUG] 	Confusion Matrix: 
+[[71  0]
+ [ 0 79]]
+24-04-28 00:15:54 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:15:54 [INFO] Step 4: Distance calculation done
+24-04-28 00:15:54 [DEBUG] Train: 350
+24-04-28 00:15:54 [INFO] Step 5: Run DST (dataset=gaussian_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:15:54 [DEBUG] 	Model init done
+24-04-28 00:16:28 [DEBUG] 	Model fit done
+24-04-28 00:16:28 [INFO] Step 6: Inference done
+24-04-28 00:16:28 [DEBUG] Training Time: 33.67s
+24-04-28 00:16:28 [DEBUG] Epochs: 100
+24-04-28 00:16:28 [DEBUG] Min Loss: 0.017
+24-04-28 00:16:29 [DEBUG] Accuracy:  0.99
+24-04-28 00:16:29 [DEBUG] F1 Score: 0.99
+24-04-28 00:16:29 [DEBUG] Confusion Matrix: 
+[[69  2]
+ [ 0 79]]
+24-04-28 00:16:29 [INFO] ------------------------------
+24-04-28 00:16:29 [INFO] Step 5: Run DST (dataset=gaussian_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:16:29 [DEBUG] 	Model init done
+24-04-28 00:17:49 [DEBUG] 	Model fit done
+24-04-28 00:17:49 [INFO] Step 6: Inference done
+24-04-28 00:17:49 [DEBUG] Training Time: 80.10s
+24-04-28 00:17:49 [DEBUG] Epochs: 238
+24-04-28 00:17:49 [DEBUG] Min Loss: 0.022
+24-04-28 00:17:50 [DEBUG] Accuracy:  0.99
+24-04-28 00:17:50 [DEBUG] F1 Score: 0.99
+24-04-28 00:17:50 [DEBUG] Confusion Matrix: 
+[[69  2]
+ [ 0 79]]
+24-04-28 00:17:50 [INFO] ------------------------------
+24-04-28 00:17:50 [DEBUG] Dataset: rectangle_df | Shape: (1263, 3)
+24-04-28 00:17:50 [DEBUG] (1263, 3) droped columns with more than 20% missing values
+24-04-28 00:17:50 [DEBUG] (1263, 3) drop rows with missing values
+24-04-28 00:17:50 [DEBUG] (1263, 3) drop non-numeric columns
+24-04-28 00:17:50 [INFO] ------ Dataset: rectangle_df | Shape: (1263, 3) | Label ratio: 0.51 -------
+24-04-28 00:17:50 [INFO] Step 0: Data split done | 884 - 379
+24-04-28 00:17:50 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:17:50 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:17:50 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:17:50 [DEBUG] Evaluation on train
+24-04-28 00:17:50 [DEBUG] 	silhouette = 0.57
+24-04-28 00:17:50 [DEBUG] 	calinski_harabasz = 1410.849
+24-04-28 00:17:50 [DEBUG] 	inertia = 1020.156
+24-04-28 00:17:50 [DEBUG] Evaluation on test
+24-04-28 00:17:50 [DEBUG] 	silhouette = 0.585
+24-04-28 00:17:50 [DEBUG] 	calinski_harabasz = 664.18
+24-04-28 00:17:50 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:17:50 [DEBUG] Evaluation on train
+24-04-28 00:17:50 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:17:50 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:17:50 [DEBUG] 	Confusion Matrix: 
+[[455   0]
+ [  0 429]]
+24-04-28 00:17:51 [DEBUG] Evaluation on test
+24-04-28 00:17:51 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:17:51 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:17:51 [DEBUG] 	Confusion Matrix: 
+[[188   0]
+ [  0 191]]
+24-04-28 00:17:51 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:17:51 [INFO] Step 4: Distance calculation done
+24-04-28 00:17:51 [DEBUG] Train: 884
+24-04-28 00:17:51 [INFO] Step 5: Run DST (dataset=rectangle_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:17:51 [DEBUG] 	Model init done
+24-04-28 00:20:03 [DEBUG] 	Model fit done
+24-04-28 00:20:03 [INFO] Step 6: Inference done
+24-04-28 00:20:03 [DEBUG] Training Time: 132.07s
+24-04-28 00:20:03 [DEBUG] Epochs: 167
+24-04-28 00:20:03 [DEBUG] Min Loss: 0.006
+24-04-28 00:20:04 [DEBUG] Accuracy:  1.00
+24-04-28 00:20:04 [DEBUG] F1 Score: 1.00
+24-04-28 00:20:04 [DEBUG] Confusion Matrix: 
+[[188   0]
+ [  0 191]]
+24-04-28 00:20:04 [INFO] ------------------------------
+24-04-28 00:20:04 [INFO] Step 5: Run DST (dataset=rectangle_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:20:04 [DEBUG] 	Model init done
+24-04-28 00:24:33 [DEBUG] 	Model fit done
+24-04-28 00:24:34 [INFO] Step 6: Inference done
+24-04-28 00:24:34 [DEBUG] Training Time: 269.33s
+24-04-28 00:24:34 [DEBUG] Epochs: 292
+24-04-28 00:24:34 [DEBUG] Min Loss: 0.008
+24-04-28 00:24:34 [DEBUG] Accuracy:  1.00
+24-04-28 00:24:34 [DEBUG] F1 Score: 1.00
+24-04-28 00:24:34 [DEBUG] Confusion Matrix: 
+[[188   0]
+ [  0 191]]
+24-04-28 00:24:34 [INFO] ------------------------------
+24-04-28 00:24:34 [DEBUG] Dataset: uniform_df | Shape: (500, 3)
+24-04-28 00:24:34 [DEBUG] (500, 3) droped columns with more than 20% missing values
+24-04-28 00:24:34 [DEBUG] (500, 3) drop rows with missing values
+24-04-28 00:24:34 [DEBUG] (500, 3) drop non-numeric columns
+24-04-28 00:24:34 [INFO] ------ Dataset: uniform_df | Shape: (500, 3) | Label ratio: 0.52 -------
+24-04-28 00:24:34 [INFO] Step 0: Data split done | 350 - 150
+24-04-28 00:24:34 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:24:34 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:24:34 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:24:34 [DEBUG] Evaluation on train
+24-04-28 00:24:34 [DEBUG] 	silhouette = 0.776
+24-04-28 00:24:34 [DEBUG] 	calinski_harabasz = 2261.41
+24-04-28 00:24:34 [DEBUG] 	inertia = 93.354
+24-04-28 00:24:35 [DEBUG] Evaluation on test
+24-04-28 00:24:35 [DEBUG] 	silhouette = 0.771
+24-04-28 00:24:35 [DEBUG] 	calinski_harabasz = 931.193
+24-04-28 00:24:35 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:24:35 [DEBUG] Evaluation on train
+24-04-28 00:24:35 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:24:35 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:24:35 [DEBUG] 	Confusion Matrix: 
+[[158   0]
+ [  0 192]]
+24-04-28 00:24:35 [DEBUG] Evaluation on test
+24-04-28 00:24:35 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:24:35 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:24:35 [DEBUG] 	Confusion Matrix: 
+[[82  0]
+ [ 0 68]]
+24-04-28 00:24:35 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:24:35 [INFO] Step 4: Distance calculation done
+24-04-28 00:24:35 [DEBUG] Train: 350
+24-04-28 00:24:35 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:24:35 [DEBUG] 	Model init done
+24-04-28 00:24:59 [DEBUG] 	Model fit done
+24-04-28 00:24:59 [INFO] Step 6: Inference done
+24-04-28 00:24:59 [DEBUG] Training Time: 24.53s
+24-04-28 00:24:59 [DEBUG] Epochs: 120
+24-04-28 00:24:59 [DEBUG] Min Loss: 0.035
+24-04-28 00:25:00 [DEBUG] Accuracy:  0.97
+24-04-28 00:25:00 [DEBUG] F1 Score: 0.97
+24-04-28 00:25:00 [DEBUG] Confusion Matrix: 
+[[82  0]
+ [ 4 64]]
+24-04-28 00:25:00 [INFO] ------------------------------
+24-04-28 00:25:00 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels, clust=kmeans breaks=3, add_mult_rules=False, maf_method=random)
+24-04-28 00:25:00 [DEBUG] 	Model init done
+24-04-28 00:26:02 [DEBUG] 	Model fit done
+24-04-28 00:26:02 [INFO] Step 6: Inference done
+24-04-28 00:26:02 [DEBUG] Training Time: 62.24s
+24-04-28 00:26:02 [DEBUG] Epochs: 264
+24-04-28 00:26:02 [DEBUG] Min Loss: 0.037
+24-04-28 00:26:03 [DEBUG] Accuracy:  0.97
+24-04-28 00:26:03 [DEBUG] F1 Score: 0.97
+24-04-28 00:26:03 [DEBUG] Confusion Matrix: 
+[[82  0]
+ [ 4 64]]
+24-04-28 00:26:03 [INFO] ------------------------------
+24-04-28 00:26:03 [DEBUG] Dataset: wine | Shape: (6497, 14)
+24-04-28 00:26:03 [DEBUG] (6497, 14) droped columns with more than 20% missing values
+24-04-28 00:26:03 [DEBUG] (6497, 14) drop rows with missing values
+24-04-28 00:26:03 [INFO] ################################################################################
+24-04-28 00:26:03 [ERROR] Error for dataset wine.csv: Label ratio is not balanced (0.8034477451131291)
+24-04-28 00:26:03 [INFO] ################################################################################
+24-04-28 00:49:56 [INFO] Found 6 datasets
+24-04-28 00:50:05 [DEBUG] Dataset: Brain Tumor | Shape: (3762, 14)
+24-04-28 00:50:05 [DEBUG] (3762, 14) droped columns with more than 20% missing values
+24-04-28 00:50:05 [DEBUG] (3762, 14) drop rows with missing values
+24-04-28 00:50:05 [DEBUG] (3762, 14) drop non-numeric columns
+24-04-28 00:50:05 [INFO] ------ Dataset: Brain Tumor | Shape: (3762, 14) | Label ratio: 0.55 -------
+24-04-28 00:50:05 [INFO] Step 0: Data split done | 2633 - 1129
+24-04-28 00:50:05 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:50:05 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:50:05 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:50:05 [DEBUG] Evaluation on train
+24-04-28 00:50:05 [DEBUG] 	silhouette = 0.378
+24-04-28 00:50:05 [DEBUG] 	calinski_harabasz = 1373.973
+24-04-28 00:50:05 [DEBUG] 	inertia = 22486.171
+24-04-28 00:50:06 [DEBUG] Evaluation on test
+24-04-28 00:50:06 [DEBUG] 	silhouette = 0.381
+24-04-28 00:50:06 [DEBUG] 	calinski_harabasz = 503.306
+24-04-28 00:50:06 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:50:06 [DEBUG] Evaluation on train
+24-04-28 00:50:06 [DEBUG] 	Accuracy:  0.99
+24-04-28 00:50:06 [DEBUG] 	F1 Score: 0.99
+24-04-28 00:50:06 [DEBUG] 	Confusion Matrix: 
+[[1460    8]
+ [  23 1142]]
+24-04-28 00:50:06 [DEBUG] Evaluation on test
+24-04-28 00:50:06 [DEBUG] 	Accuracy:  0.99
+24-04-28 00:50:06 [DEBUG] 	F1 Score: 0.99
+24-04-28 00:50:06 [DEBUG] 	Confusion Matrix: 
+[[609   2]
+ [  8 510]]
+24-04-28 00:50:06 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:50:06 [INFO] Step 4: Distance calculation done
+24-04-28 00:50:06 [DEBUG] Train: 2633
+24-04-28 00:50:06 [INFO] Step 5: Run DST (dataset=Brain Tumor, label_for_dist=labels_clustering, clust=kmeans, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:50:06 [DEBUG] 	Model init done
+24-04-28 00:52:15 [DEBUG] 	Model fit done
+24-04-28 00:52:15 [INFO] Step 6: Inference done
+24-04-28 00:52:15 [DEBUG] Training Time: 124.53s
+24-04-28 00:52:15 [DEBUG] Epochs: 115
+24-04-28 00:52:15 [DEBUG] Min Loss: 0.018
+24-04-28 00:52:15 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-28 00:52:15 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-28 00:52:15 [DEBUG] Accuracy:  0.98
+24-04-28 00:52:15 [DEBUG] F1 Score: 0.98
+24-04-28 00:52:15 [DEBUG] Confusion Matrix: 
+[[606   5]
+ [ 16 502]]
+24-04-28 00:52:15 [INFO] ################################################################################
+24-04-28 00:52:15 [ERROR] Error for dataset Brain Tumor.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-28 00:52:15 [INFO] ################################################################################
+24-04-28 00:52:15 [DEBUG] Dataset: breast-cancer-wisconsin | Shape: (683, 10)
+24-04-28 00:52:15 [DEBUG] (683, 10) droped columns with more than 20% missing values
+24-04-28 00:52:15 [DEBUG] (683, 10) drop rows with missing values
+24-04-28 00:52:15 [DEBUG] (683, 10) drop non-numeric columns
+24-04-28 00:52:15 [INFO] ------ Dataset: breast-cancer-wisconsin | Shape: (683, 10) | Label ratio: 0.65 -------
+24-04-28 00:52:15 [INFO] Step 0: Data split done | 478 - 205
+24-04-28 00:52:15 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:52:15 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:52:15 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:52:15 [DEBUG] Evaluation on train
+24-04-28 00:52:15 [DEBUG] 	silhouette = 0.585
+24-04-28 00:52:15 [DEBUG] 	calinski_harabasz = 657.01
+24-04-28 00:52:15 [DEBUG] 	inertia = 2008.173
+24-04-28 00:52:15 [DEBUG] Evaluation on test
+24-04-28 00:52:15 [DEBUG] 	silhouette = 0.621
+24-04-28 00:52:16 [DEBUG] 	calinski_harabasz = 345.144
+24-04-28 00:52:16 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:52:16 [DEBUG] Evaluation on train
+24-04-28 00:52:16 [DEBUG] 	Accuracy:  0.98
+24-04-28 00:52:16 [DEBUG] 	F1 Score: 0.97
+24-04-28 00:52:16 [DEBUG] 	Confusion Matrix: 
+[[307   5]
+ [  5 161]]
+24-04-28 00:52:16 [DEBUG] Evaluation on test
+24-04-28 00:52:16 [DEBUG] 	Accuracy:  0.98
+24-04-28 00:52:16 [DEBUG] 	F1 Score: 0.97
+24-04-28 00:52:16 [DEBUG] 	Confusion Matrix: 
+[[130   2]
+ [  3  70]]
+24-04-28 00:52:16 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:52:16 [INFO] Step 4: Distance calculation done
+24-04-28 00:52:16 [DEBUG] Train: 478
+24-04-28 00:52:16 [INFO] Step 5: Run DST (dataset=breast-cancer-wisconsin, label_for_dist=labels_clustering, clust=kmeans, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:52:16 [DEBUG] 	Model init done
+24-04-28 00:52:34 [DEBUG] 	Model fit done
+24-04-28 00:52:34 [INFO] Step 6: Inference done
+24-04-28 00:52:34 [DEBUG] Training Time: 17.80s
+24-04-28 00:52:34 [DEBUG] Epochs: 72
+24-04-28 00:52:34 [DEBUG] Min Loss: 0.023
+24-04-28 00:52:35 [DEBUG] Accuracy:  0.98
+24-04-28 00:52:35 [DEBUG] F1 Score: 0.97
+24-04-28 00:52:35 [DEBUG] Confusion Matrix: 
+[[129   3]
+ [  2  71]]
+24-04-28 00:52:35 [INFO] ################################################################################
+24-04-28 00:52:35 [ERROR] Error for dataset breast-cancer-wisconsin.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-28 00:52:35 [INFO] ################################################################################
+24-04-28 00:52:35 [DEBUG] Dataset: gaussian_df | Shape: (500, 3)
+24-04-28 00:52:35 [DEBUG] (500, 3) droped columns with more than 20% missing values
+24-04-28 00:52:35 [DEBUG] (500, 3) drop rows with missing values
+24-04-28 00:52:35 [DEBUG] (500, 3) drop non-numeric columns
+24-04-28 00:52:35 [INFO] ------ Dataset: gaussian_df | Shape: (500, 3) | Label ratio: 0.50 -------
+24-04-28 00:52:35 [INFO] Step 0: Data split done | 350 - 150
+24-04-28 00:52:35 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:52:35 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:52:35 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:52:35 [DEBUG] Evaluation on train
+24-04-28 00:52:35 [DEBUG] 	silhouette = 0.719
+24-04-28 00:52:35 [DEBUG] 	calinski_harabasz = 1653.432
+24-04-28 00:52:35 [DEBUG] 	inertia = 182.569
+24-04-28 00:52:35 [DEBUG] Evaluation on test
+24-04-28 00:52:35 [DEBUG] 	silhouette = 0.727
+24-04-28 00:52:35 [DEBUG] 	calinski_harabasz = 764.49
+24-04-28 00:52:35 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:52:35 [DEBUG] Evaluation on train
+24-04-28 00:52:35 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:52:35 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:52:35 [DEBUG] 	Confusion Matrix: 
+[[179   0]
+ [  0 171]]
+24-04-28 00:52:35 [DEBUG] Evaluation on test
+24-04-28 00:52:35 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:52:35 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:52:35 [DEBUG] 	Confusion Matrix: 
+[[71  0]
+ [ 0 79]]
+24-04-28 00:52:35 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:52:35 [INFO] Step 4: Distance calculation done
+24-04-28 00:52:35 [DEBUG] Train: 350
+24-04-28 00:52:35 [INFO] Step 5: Run DST (dataset=gaussian_df, label_for_dist=labels_clustering, clust=kmeans, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:52:35 [DEBUG] 	Model init done
+24-04-28 00:52:51 [DEBUG] 	Model fit done
+24-04-28 00:52:51 [INFO] Step 6: Inference done
+24-04-28 00:52:51 [DEBUG] Training Time: 15.44s
+24-04-28 00:52:51 [DEBUG] Epochs: 100
+24-04-28 00:52:51 [DEBUG] Min Loss: 0.017
+24-04-28 00:52:51 [DEBUG] Accuracy:  0.99
+24-04-28 00:52:51 [DEBUG] F1 Score: 0.99
+24-04-28 00:52:51 [DEBUG] Confusion Matrix: 
+[[69  2]
+ [ 0 79]]
+24-04-28 00:52:51 [INFO] ################################################################################
+24-04-28 00:52:51 [ERROR] Error for dataset gaussian_df.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-28 00:52:51 [INFO] ################################################################################
+24-04-28 00:52:51 [DEBUG] Dataset: rectangle_df | Shape: (1263, 3)
+24-04-28 00:52:51 [DEBUG] (1263, 3) droped columns with more than 20% missing values
+24-04-28 00:52:51 [DEBUG] (1263, 3) drop rows with missing values
+24-04-28 00:52:51 [DEBUG] (1263, 3) drop non-numeric columns
+24-04-28 00:52:51 [INFO] ------ Dataset: rectangle_df | Shape: (1263, 3) | Label ratio: 0.51 -------
+24-04-28 00:52:51 [INFO] Step 0: Data split done | 884 - 379
+24-04-28 00:52:51 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:52:51 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:52:51 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:52:51 [DEBUG] Evaluation on train
+24-04-28 00:52:51 [DEBUG] 	silhouette = 0.57
+24-04-28 00:52:51 [DEBUG] 	calinski_harabasz = 1410.849
+24-04-28 00:52:51 [DEBUG] 	inertia = 1020.156
+24-04-28 00:52:52 [DEBUG] Evaluation on test
+24-04-28 00:52:52 [DEBUG] 	silhouette = 0.585
+24-04-28 00:52:52 [DEBUG] 	calinski_harabasz = 664.18
+24-04-28 00:52:52 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:52:52 [DEBUG] Evaluation on train
+24-04-28 00:52:52 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:52:52 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:52:52 [DEBUG] 	Confusion Matrix: 
+[[455   0]
+ [  0 429]]
+24-04-28 00:52:52 [DEBUG] Evaluation on test
+24-04-28 00:52:52 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:52:52 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:52:52 [DEBUG] 	Confusion Matrix: 
+[[188   0]
+ [  0 191]]
+24-04-28 00:52:52 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:52:52 [INFO] Step 4: Distance calculation done
+24-04-28 00:52:52 [DEBUG] Train: 884
+24-04-28 00:52:52 [INFO] Step 5: Run DST (dataset=rectangle_df, label_for_dist=labels_clustering, clust=kmeans, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:52:52 [DEBUG] 	Model init done
+24-04-28 00:54:31 [DEBUG] 	Model fit done
+24-04-28 00:54:31 [INFO] Step 6: Inference done
+24-04-28 00:54:31 [DEBUG] Training Time: 98.65s
+24-04-28 00:54:31 [DEBUG] Epochs: 291
+24-04-28 00:54:31 [DEBUG] Min Loss: 0.009
+24-04-28 00:54:31 [DEBUG] Accuracy:  1.00
+24-04-28 00:54:31 [DEBUG] F1 Score: 1.00
+24-04-28 00:54:31 [DEBUG] Confusion Matrix: 
+[[188   0]
+ [  0 191]]
+24-04-28 00:54:31 [INFO] ################################################################################
+24-04-28 00:54:31 [ERROR] Error for dataset rectangle_df.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-28 00:54:31 [INFO] ################################################################################
+24-04-28 00:54:31 [DEBUG] Dataset: uniform_df | Shape: (500, 3)
+24-04-28 00:54:31 [DEBUG] (500, 3) droped columns with more than 20% missing values
+24-04-28 00:54:31 [DEBUG] (500, 3) drop rows with missing values
+24-04-28 00:54:31 [DEBUG] (500, 3) drop non-numeric columns
+24-04-28 00:54:31 [INFO] ------ Dataset: uniform_df | Shape: (500, 3) | Label ratio: 0.52 -------
+24-04-28 00:54:32 [INFO] Step 0: Data split done | 350 - 150
+24-04-28 00:54:32 [DEBUG] Step 1: Standard scaling complete
+24-04-28 00:54:32 [INFO] Step 2.1: Performing kmeans clustering
+24-04-28 00:54:32 [INFO] Step 2.1: Clustering and inference done
+24-04-28 00:54:32 [DEBUG] Evaluation on train
+24-04-28 00:54:32 [DEBUG] 	silhouette = 0.776
+24-04-28 00:54:32 [DEBUG] 	calinski_harabasz = 2261.41
+24-04-28 00:54:32 [DEBUG] 	inertia = 93.354
+24-04-28 00:54:32 [DEBUG] Evaluation on test
+24-04-28 00:54:32 [DEBUG] 	silhouette = 0.771
+24-04-28 00:54:32 [DEBUG] 	calinski_harabasz = 931.193
+24-04-28 00:54:32 [INFO] Step 2.2: Clustering evaluation done
+24-04-28 00:54:32 [DEBUG] Evaluation on train
+24-04-28 00:54:32 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:54:32 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:54:32 [DEBUG] 	Confusion Matrix: 
+[[158   0]
+ [  0 192]]
+24-04-28 00:54:32 [DEBUG] Evaluation on test
+24-04-28 00:54:32 [DEBUG] 	Accuracy:  1.00
+24-04-28 00:54:32 [DEBUG] 	F1 Score: 1.00
+24-04-28 00:54:32 [DEBUG] 	Confusion Matrix: 
+[[82  0]
+ [ 0 68]]
+24-04-28 00:54:32 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-28 00:54:32 [INFO] Step 4: Distance calculation done
+24-04-28 00:54:32 [DEBUG] Train: 350
+24-04-28 00:54:32 [INFO] Step 5: Run DST (dataset=uniform_df, label_for_dist=labels_clustering, clust=kmeans, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-28 00:54:32 [DEBUG] 	Model init done
+24-04-28 00:55:12 [DEBUG] 	Model fit done
+24-04-28 00:55:12 [INFO] Step 6: Inference done
+24-04-28 00:55:12 [DEBUG] Training Time: 39.99s
+24-04-28 00:55:12 [DEBUG] Epochs: 308
+24-04-28 00:55:12 [DEBUG] Min Loss: 0.040
+24-04-28 00:55:12 [DEBUG] Accuracy:  0.97
+24-04-28 00:55:12 [DEBUG] F1 Score: 0.97
+24-04-28 00:55:12 [DEBUG] Confusion Matrix: 
+[[82  0]
+ [ 4 64]]
+24-04-28 00:55:12 [INFO] ################################################################################
+24-04-28 00:55:12 [ERROR] Error for dataset uniform_df.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-28 00:55:12 [INFO] ################################################################################
+24-04-28 00:55:12 [DEBUG] Dataset: wine | Shape: (6497, 14)
+24-04-28 00:55:12 [DEBUG] (6497, 14) droped columns with more than 20% missing values
+24-04-28 00:55:12 [DEBUG] (6497, 14) drop rows with missing values
+24-04-28 00:55:12 [INFO] ################################################################################
+24-04-28 00:55:12 [ERROR] Error for dataset wine.csv: Label ratio is not balanced (0.8034477451131291)
+24-04-28 00:55:12 [INFO] ################################################################################
