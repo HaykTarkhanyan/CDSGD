@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import confusion_matrix
 from sklearn.cluster import DBSCAN
 from sklearn.neighbors import NearestNeighbors
+from scipy.spatial import cKDTree
 
 import matplotlib.pyplot as plt
 import plotly.express as px
@@ -20,6 +21,63 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
                         datefmt="%d-%b-%y %H:%M:%S")
 
+
+def dbscan_predict(model, X):
+    nr_samples = X.shape[0]
+
+    y_new = np.ones(shape=nr_samples, dtype=int) * -1
+
+    for i in range(nr_samples):
+        diff = model.components_ - X[i, :]  # NumPy broadcasting
+
+        dist = np.linalg.norm(diff, axis=1)  # Euclidean distance
+
+        shortest_dist_idx = np.argmin(dist)
+
+        if dist[shortest_dist_idx] < model.eps:
+            y_new[i] = model.labels_[model.core_sample_indices_[shortest_dist_idx]]
+
+    return y_new
+
+
+def calculate_adjusted_density(data, labels, radius, penalty_rate=0.5, 
+                               remove_outliers=False, normalize=False):
+    """
+    Calculate the adjusted density of each point in the dataset based on the number of points within a specified radius.
+    The density score is penalized if neighboring points belong to a different class.
+
+    Args:
+    - data (numpy array): The dataset where each row is a point in space.
+    - labels (numpy array): Class labels corresponding to each data point.
+    - radius (float): The radius of the ball within which to count neighboring points.
+    - penalty_rate (float): Penalty multiplier for points from different classes within the radius.
+    - remove_outliers (bool): Whether to remove outliers from the dataset before calculating densities.
+    
+    Returns:
+    - densities (numpy array): An array where each element is the adjusted density of the corresponding point in 'data'.
+    """
+    tree = cKDTree(data)
+    densities = np.zeros(data.shape[0])
+    
+    for i, point in enumerate(data):
+        indices = tree.query_ball_point(point, r=radius)
+        class_counts = np.sum(labels[indices] != labels[i])
+        # Calculate density with penalty for different class points
+        densities[i] = len(indices) - 1 - (class_counts * penalty_rate)
+
+    if remove_outliers:
+        outliers = detect_outliers_z_score(densities)
+        densities = np.array([d for d in densities if d not in outliers])
+    
+    if normalize:        
+        densities = (densities - densities.min()) / (densities.max() - densities.min())
+
+    if sum(densities) == 0:
+        msg = "All densities are zero. Consider changing the radius"
+        logging.error(msg)
+        raise ValueError(msg) 
+    
+    return densities
 
 def get_kdist_plot(X=None, k=None, radius_nbrs=1.0):
     if k is None:
@@ -42,7 +100,6 @@ def get_kdist_plot(X=None, k=None, radius_nbrs=1.0):
     plt.close()
 
 def run_dbscan(X_scaled, target_clusters=target_clusters, eps=eps, min_samples=min_samples, step=step, max_eps=max_eps):
-    
     current_clusters = 0
     while current_clusters != target_clusters and eps <= max_eps:
         # DBSCAN with current eps and min_samples
@@ -124,7 +181,7 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
         res_df.to_csv(save_path, index=False)
 
 def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDENCE_BY_PROPORTION,
-                   only_plot=False, print_results=False):
+                   only_plot=False, print_results=False, label_column="labels"):
     """
     Filters a DataFrame based on a given rule lambda function and calculates the confidence score.
 
@@ -150,10 +207,13 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         
 
     """
-    required_columns = ["labels_clustering", "distance_norm"]
+    # formely label column was "labels_clustering"
+    required_columns = [label_column, "distance_norm"]
     for column in required_columns:
         assert column in df.columns, f"{column} column not found in DataFrame"
-    
+    assert df["distance_norm"].isna().sum() == 0, "distance_norm column contains NaN values"
+    assert np.isinf(df["distance_norm"]).sum() == 0, "distance_norm column contains inf values"
+        
     # example is lambda row: row["x"]>0.5 and row["y"]>0.5
     df["rule_applies"] = df.apply(rule_lambda, axis=1)
     
@@ -169,16 +229,16 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         fig.show()
         return fig 
     
-    num_labels = df_rule["labels_clustering"].nunique()
+    num_labels = df_rule[label_column].nunique()
     if print_results:
         logging.debug(f"Number of data points left after filtering: {len(df_rule)}")
         logging.debug(f"Number of clusters left after filtering: {num_labels}")  
     
-    most_common_cluster = df_rule["labels_clustering"].mode().values[0]
+    most_common_cluster = df_rule[label_column].mode().values[0]
     if print_results: logging.debug(f"Most common cluster: {most_common_cluster}")
 
     
-    if df_rule["labels_clustering"].nunique() == 1:
+    if df_rule[label_column].nunique() == 1:
         
         if print_results: logging.debug("All data points belong to the same cluster")
         confidence = df_rule["distance_norm"].mean()
@@ -188,17 +248,23 @@ def filter_by_rule(df, rule_lambda, lower_confidence_by_proportion=LOWER_CONFIDE
         if print_results: logging.debug("Data points belong to different clusters")
         # most common cluster        
         # confidence
-        confidence = df_rule[df_rule["labels_clustering"] == most_common_cluster]["distance_norm"].mean()
+        confidence = df_rule[df_rule[label_column] == most_common_cluster]["distance_norm"].mean()
         if print_results: logging.debug(f"Confidence: {1 - confidence}")
         
         if lower_confidence_by_proportion:
             # num of data points in most common cluster
-            num_points = len(df_rule[df_rule["labels_clustering"] == most_common_cluster])
+            num_points = len(df_rule[df_rule[label_column] == most_common_cluster])
+            if num_points == 0:
+                if print_results: logging.debug("No data points in most common cluster")
+                raise ValueError("No data points in most common cluster")
             # proportion of data points in most common cluster
             proportion = num_points / len(df_rule)
             
             confidence = confidence * proportion
             if print_results: logging.debug(f"Confidence after lowering based on proportion: {1 - confidence}")
+    
+    assert not np.isnan(confidence), "Confidence is NaN"    
+        
     if most_common_cluster == 0:
         return 1 - confidence, confidence/2, confidence/2
     elif most_common_cluster == 1:

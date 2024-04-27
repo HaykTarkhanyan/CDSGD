@@ -6,6 +6,7 @@ import random
 #  (m_null = 0, m_cls_0, m_cls_1, m_either)
 import torch
 from utils import filter_by_rule
+from config import print_results_MAF_kmeans
 
 
 def dempster_rule(m1, m2):
@@ -105,10 +106,10 @@ def create_full_uncertainty():
     """
     return 0, 0, 0, 1
 
-def create_uncertainty_kmeans(data, pred):
-    assert "labels_clustering" in data.columns, "No kmeans labels in data"
+def create_uncertainty_clustering(data, pred):
+    assert "labels_clustering" in data.columns, "No clustering labels in data"
     
-    masses = filter_by_rule(data, pred)
+    masses = filter_by_rule(data, pred, print_results=print_results_MAF_kmeans)
     return masses
     
     

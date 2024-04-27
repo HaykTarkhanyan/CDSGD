@@ -17,3 +17,8 @@ train_set_size = 0.7
 
 LOGGING_MAX_SIZE_MB = 5
 LOGGING_BACKUP_COUNT = 2
+
+# confidence calculation dbscan
+penalty_rate = 0.5
+
+print_results_MAF_kmeans = False
