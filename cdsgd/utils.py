@@ -4,6 +4,7 @@ import logging
 
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
 import plotly.express as px
 import datetime 
 import pandas as pd
@@ -34,9 +35,15 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
             logging.debug(f"Training Time: {dt:.2f}s")
             logging.debug(f"Epochs: {epoch+1}")
             logging.debug(f"Min Loss: {losses[-1]:.3f}")
-            fig = px.line(losses, markers=True, title=f"Loss over epochs ({name})")
-            # fig.write_image(os.path.join("plots", f"{name}.png"))
-            fig.show()
+            plt.style.use('ggplot')
+            plt.plot(list(range(epoch+1)), losses)
+            plt.xlabel('Epochs')
+            plt.ylabel('Loss')
+            plt.title(name, fontsize=10)
+            plt.savefig(os.path.join("plots", f"{name}.png"))
+            plt.show()
+            # save to csv
+
 
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
@@ -58,7 +65,7 @@ def report_results(y_test, y_pred, epoch=None, dt=None, losses=None, method=None
                    "accuracy": accuracy, "f1": f1, 
                     "confusion_matrix": conf_matrix, 
                     "training_time": dt, "epochs": epoch+1,"min_loss": losses[-1], 
-                    "datetime": now, }
+                    "all_losses": losses, "datetime": now}
         
         res_df = pd.read_csv(save_path) if os.path.exists(save_path) else pd.DataFrame()
         res_df = pd.concat([res_df, pd.DataFrame([res_row])], ignore_index=True)

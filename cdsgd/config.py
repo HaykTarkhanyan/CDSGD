@@ -13,7 +13,7 @@ min_samples = 5  # You can adjust this based on data density
 target_clusters = 2  # Desired number of clusters excluding noise
 
 train_set_size = 0.7
-
+# https://www.kaggle.com/datasets/abhinav89/telecom-customer
 
 LOGGING_MAX_SIZE_MB = 5
 LOGGING_BACKUP_COUNT = 2
