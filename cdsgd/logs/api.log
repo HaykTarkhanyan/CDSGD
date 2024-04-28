@@ -22126,3 +22126,71 @@ KeyError: -1
 24-04-28 02:56:20 [INFO] Step 0: Data split done | 54833 - 23501
 24-04-28 02:56:20 [DEBUG] Step 1: Standard scaling complete
 24-04-28 02:56:20 [INFO] Step 2.1: Performing dbscan clustering
+24-04-29 01:07:15 [INFO] Found 6 datasets
+24-04-29 01:07:43 [DEBUG] Dataset: wine | Shape: (6497, 14)
+24-04-29 01:07:43 [DEBUG] (6497, 14) droped columns with more than 20% missing values
+24-04-29 01:07:43 [DEBUG] (6497, 14) drop rows with missing values
+24-04-29 01:07:43 [DEBUG] (6497, 14) drop non-numeric columns
+24-04-29 01:07:43 [INFO] ------ Dataset: wine | Shape: (6497, 14) | Label ratio: 0.80 -------
+24-04-29 01:07:43 [INFO] Step 0: Data split done | 4547 - 1950
+24-04-29 01:07:43 [DEBUG] Step 1: Standard scaling complete
+24-04-29 01:07:43 [INFO] Step 2.1: Performing dbscan clustering
+24-04-29 01:08:38 [INFO] Step 2.1: Clustering and inference done
+24-04-29 01:08:38 [DEBUG] Evaluation on train
+24-04-29 01:08:38 [DEBUG] 	silhouette = 0.527
+24-04-29 01:08:38 [DEBUG] 	calinski_harabasz = 21.821
+24-04-29 01:08:38 [DEBUG] Evaluation on test
+24-04-29 01:08:38 [DEBUG] 	silhouette = 0.659
+24-04-29 01:08:38 [DEBUG] 	calinski_harabasz = 18.841
+24-04-29 01:08:38 [INFO] Step 2.2: Clustering evaluation done
+24-04-29 01:08:38 [DEBUG] Evaluation on train
+24-04-29 01:08:38 [DEBUG] 	Accuracy:  0.80
+24-04-29 01:08:38 [DEBUG] 	F1 Score: 0.00
+24-04-29 01:08:38 [DEBUG] 	Confusion Matrix: 
+[[3625    3]
+ [ 911    0]]
+24-04-29 01:08:38 [DEBUG] Evaluation on test
+24-04-29 01:08:38 [DEBUG] 	Accuracy:  0.81
+24-04-29 01:08:38 [DEBUG] 	F1 Score: 0.00
+24-04-29 01:08:38 [DEBUG] 	Confusion Matrix: 
+[[1582    0]
+ [ 366    0]]
+24-04-29 01:08:38 [INFO] Step 3: Clustering as a classifier, evaluation done
+24-04-29 01:08:42 [INFO] Step 4: Distance calculation done
+24-04-29 01:08:42 [DEBUG] Train: 4547
+24-04-29 01:08:42 [INFO] Step 5: Run DST (dataset=wine, label_for_dist=labels_clustering, clust=dbscan, breaks=3, add_mult_rules=False, maf_method=clustering)
+24-04-29 01:08:42 [DEBUG] 	Model init done
+24-04-29 01:11:13 [DEBUG] 	Model fit done
+24-04-29 01:11:13 [INFO] Step 6: Inference done
+24-04-29 01:11:13 [DEBUG] Training Time: 138.50s
+24-04-29 01:11:13 [DEBUG] Epochs: 74
+24-04-29 01:11:13 [DEBUG] Min Loss: 0.001
+24-04-29 01:11:13 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-29 01:11:13 [DEBUG] Loaded backend module://matplotlib_inline.backend_inline version unknown.
+24-04-29 01:11:14 [DEBUG] Accuracy:  1.00
+24-04-29 01:11:14 [DEBUG] F1 Score: 1.00
+24-04-29 01:11:14 [DEBUG] Confusion Matrix: 
+[[1584    0]
+ [   0  366]]
+24-04-29 01:11:14 [INFO] ################################################################################
+24-04-29 01:11:14 [ERROR] Error for dataset wine.csv: [Errno 13] Permission denied: 'experiments.csv'
+24-04-29 01:11:14 [ERROR] Traceback (most recent call last):
+  File "C:\Users\hayk_\AppData\Local\Temp\ipykernel_7036\3977836208.py", line 8, in <module>
+    do_all_for_dataset(dataset, nrows=None, ratio_deviation=0.4)
+  File "C:\Users\hayk_\AppData\Local\Temp\ipykernel_7036\77234171.py", line 158, in do_all_for_dataset
+    report_results(y_test, y_pred, dataset=dataset_name, method=method,
+  File "c:\Users\hayk_\OneDrive\Desktop\Thesis\CDSGD\cdsgd\utils.py", line 254, in report_results
+    res_df.to_csv(save_path, index=False)
+  File "c:\Users\hayk_\.conda\envs\thesis\lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\hayk_\.conda\envs\thesis\lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "c:\Users\hayk_\.conda\envs\thesis\lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "c:\Users\hayk_\.conda\envs\thesis\lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+  File "c:\Users\hayk_\.conda\envs\thesis\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+PermissionError: [Errno 13] Permission denied: 'experiments.csv'
+
+24-04-29 01:11:14 [INFO] ################################################################################
