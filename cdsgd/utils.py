@@ -21,7 +21,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s", 
                         datefmt="%d-%b-%y %H:%M:%S")
 
-def get_distance(df, model, alg="kmeans", density_radius=0.5):
+def get_distance(df, model, alg="kmeans", density_radius=0.5, penalty_rate=penalty_rate):
     if alg == "kmeans":
         distances = np.min(
             np.linalg.norm(df[:, np.newaxis] - model.cluster_centers_, axis=2), axis=1) 
@@ -45,7 +45,9 @@ def remove_outliers_and_normalize(df, distance_column="distance", label_column="
         return (x - min_val[label]) / (max_val[label] - min_val[label]) if max_val[label] > min_val[label] else 0
         
     dist_norm = df.apply(lambda row: scale(row[distance_column], row[label_column]), axis=1)
-    
+    # set all values greated than 1 to 1.01
+    dist_norm = np.array([1.01 if d > 1 else d for d in dist_norm])
+
     return dist_norm
 
 
