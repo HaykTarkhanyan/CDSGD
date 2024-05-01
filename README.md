@@ -1,3 +1,5 @@
+Migrated to https://github.com/HaykTarkhanyan/DSGD-Enhanced on May 1, 2024
+
 # DSClustering
 
 Tabular interpretable clustering based on Dempster-Shafer Theory and 
